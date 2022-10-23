@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch} from 'react-redux';
 // import { Redirect } from 'react-router-dom';
+import './LoginForm.css'
 
 
 function LoginForm() {
@@ -28,6 +29,8 @@ function LoginForm() {
   }
 
   return (
+    <div className='kelly-modal'>
+      <div>Wlecome to EBDB BnB</div>
     <form onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => (
@@ -50,8 +53,11 @@ function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
+      <div><button className='demo-user' type='submit' onClick={()=> {setCredential("Childish")
+       setPassword("password")}}>DEMO USER</button></div>
       <button type="submit">Log In</button>
     </form>
+    </div>
   );
 }
 

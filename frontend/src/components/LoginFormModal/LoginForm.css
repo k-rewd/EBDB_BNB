@@ -1,0 +1,8 @@
+.kelly-modal {
+  display: flex;
+  /* flex-direction: column; */
+  width: 500px;
+  gap: 20px;
+  margin: 50px;
+  border-radius: 14px;
+}
