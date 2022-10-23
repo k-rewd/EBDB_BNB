@@ -1,7 +1,7 @@
 // frontend/src/components/LoginFormPage/index.js
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 // import { Redirect } from 'react-router-dom';
 import './LoginForm.css'
 
@@ -29,34 +29,40 @@ function LoginForm() {
   }
 
   return (
-    <div className='kelly-modal'>
-      <div>Wlecome to EBDB BnB</div>
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
-        ))}
-      </ul>
-      <label>
-        Username or Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </label>
-      <div><button className='demo-user' type='submit' onClick={()=> {setCredential("Childish")
-       setPassword("password")}}>DEMO USER</button></div>
-      <button type="submit">Log In</button>
-    </form>
+    <div className='login-form-modal'>
+      <div className="welcome-message">Welcome to the EBDB BnB</div>
+      <form onSubmit={handleSubmit}>
+        <div className="error-message-container">
+          <ul>
+            {errors.map((error, idx) => (
+              <li className="error-messages" key={idx}>{error}</li>
+            ))}
+          </ul>
+        </div>
+        <div className='user-input-action-button'>
+          <label className='input-prompt-label'>
+            Username or Email </label>
+            <input
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+            />
+          
+          <label className='input-prompt-label'>
+            Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          
+          <div><button className='demo-user' type='submit' onClick={() => {
+            setCredential("Childish")
+            setPassword("password")
+          }}>DEMO USER</button></div>
+          <button type="submit">Log In</button>
+        </div>
+      </form>
     </div>
   );
 }

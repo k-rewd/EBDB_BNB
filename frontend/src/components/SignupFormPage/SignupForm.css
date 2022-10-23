@@ -8,18 +8,22 @@
 .sign-up-form-content-area {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 50%;
+  align-content: center;
   height: 100%;
+  gap: 1px;
 }
 
 .pink-buttons {
   width: 100%;
+  background-color: #FF385C;
+  color: white;
+  font-weight: bold;
+  /* background: transparent; */
 }
 
 #welcome {
   display: flex;
-  justify-content: center;
+  justify-self: center;
 }
 
 .sign-up-errors {

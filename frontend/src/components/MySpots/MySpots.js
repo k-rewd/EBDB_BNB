@@ -28,7 +28,7 @@ const MySpotsIndex = () => {
   // console.log('lookatme', objValue)
   // const filtered = objValue.filter(spot => spot.ownerId === user.id)
 
-{/* <div className="my-spots-title-row"><h1 id="my-spots-kelly">{spotOwner.firstName}'s Spots</h1></div> */}
+{/* <div className="my-spots-title-row"><h1 id="my-spots-h1">{spotOwner.firstName}'s Spots</h1></div> */}
   if (!Object.values(userSpots).length) {
     return null
   } else {

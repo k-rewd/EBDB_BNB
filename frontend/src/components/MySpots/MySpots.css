@@ -1,11 +1,11 @@
 #outer-most-my-spots {
   display: flex;
   justify-content:space-between;
-  /* border: 10px solid red; */
+  border: 10px solid red;
 }
 
 
-#my-spots-kelly {
+#my-spots-h1 {
   width: 100%;
 }
 

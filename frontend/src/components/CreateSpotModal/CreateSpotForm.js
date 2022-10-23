@@ -104,43 +104,43 @@ const CreateSpotForm = ({ setShowModal }) => {
         
           <ul>
               {errors && validationErrors.length > 0 && validationErrors.map(error => (
-                <li key={error}>{error}</li>))}
+                <li className="error-messages" key={error}>{error}</li>))}
           </ul>
-          <label>
+          <label>Address</label>
             <input
               type='text'
               placeholder='Address'
               value={address}
               onChange={updateAddress} />
-          </label>
-          <label>
+          
+          <label>City</label>
             <input
               type='text'
               placeholder='City'
               value={city}
               onChange={updateCity} />
-          </label>
-          <label>
+          
+          <label>State</label>
             <input
               type='text'
               placeholder='State'
               value={state}
               onChange={updateState} />
-          </label>
-          <label>
+          
+          <label>Country</label>
             <input
               type='text'
               placeholder='Country'
               value={country}
               onChange={updateCountry} />
-          </label>
-          <label>
+          
+          <label>Name</label>
             <input
               type='text'
               placeholder='Name'
               value={name}
               onChange={updateName} />
-          </label>
+          
           {/* <input
           type='number'
           placeholder='L'
@@ -151,14 +151,14 @@ const CreateSpotForm = ({ setShowModal }) => {
           placeholder='Address'
           value={address}
           onChange={updateLng}/> */}
-          <label>
+          <label>Description</label>
             <input
               type='text'
               placeholder='Description'
               value={description}
               onChange={updateDescription} />
-          </label>
-          <label>
+          
+          <label>Price</label>
             <input
               type='number'
               placeholder='Price'
@@ -166,14 +166,14 @@ const CreateSpotForm = ({ setShowModal }) => {
               min='0'
               max='999999'
               onChange={updatePrice} />
-          </label>
-          <label>
+          
+          <label>Image(URL)</label>
             <input
               type='text'
               placeholder='image url'
               value={url}
               onChange={updateURL}/>
-          </label>
+          
           <button type="submit">Create New Spot</button>
           {/* <button type="button" onClick={handleCancelClick}>Cancel</button> */}
         </form>
