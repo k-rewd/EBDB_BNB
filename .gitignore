@@ -1,0 +1,6 @@
+node_modules
+.env
+build
+.DS_Store
+*.db
+JWT_SECRET=kxI+T/g/aFYK2g==

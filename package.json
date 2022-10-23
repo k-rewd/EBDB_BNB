@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "express-validator": "^6.14.2",
+    "pg": "^8.8.0"
+  },
+  "name": "authenticate-me",
+  "description": "## Database Schema Design",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "npm run build --prefix frontend",
+    "install": "npm --prefix backend install backend && npm --prefix frontend install frontend",
+    "dev:backend": "npm install --prefix backend start",
+    "dev:frontend": "npm install --prefix frontend start",
+    "sequelize": "npm run --prefix backend sequelize",
+    "sequelize-cli": "npm run --prefix backend sequelize-cli",
+    "start": "npm start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-rewd/authenticateMe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-rewd/authenticateMe/issues"
+  },
+  "homepage": "https://github.com/k-rewd/authenticateMe#readme",
+  "devDependencies": {}
+}
