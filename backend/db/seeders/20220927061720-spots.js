@@ -24,7 +24,7 @@ module.exports = {
         lat: 37.7645358,
         lng: -122.4730327,
         name: 'McDonalds',
-        description: "Is this the real life? Is this just fantasy? Caught in a landside, No escape from reality Open your eyes, Look up to the skies and see, I'm just a poor boy, I need no sympathy, Because I'm easy come, easy go",
+        description: "Is this the real life? Is this just fantasy? Caught in a landside, No escape from reality Open your eyes",
         price: 500
       },
       {
@@ -36,7 +36,7 @@ module.exports = {
         lat: 39.7645358,
         lng: -124.4730327,
         name: 'Jack in the Box',
-        description: "Mamaaa, life had just begun, But now I've gone and thrown it all away Mama, oooh, Didn't mean to make you cry, If I'm not back again this time tomorrow, Carry on, carry on as if nothing really matters",
+        description: "Mamaaa, life had just begun, But now I've gone and thrown it all away Mama, oooh, Didn't mean to make you cry, ",
         price: 400
       },
       {
@@ -48,7 +48,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'In N Out',
-        description: "Too late, my time has come, Sends shivers down my spine, body's aching all The time Goodbye, everybody, I've got to go, Gotta leave you all behind and face the truth",
+        description: "Too late, my time has come, Sends shivers down my spine, body's aching all The time Goodbye, everybody,",
         price: 350
       },
       {
@@ -60,7 +60,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: "Carl's Jr",
-        description: "Everybody wanna cut the legs off him, Kunta Black man taking no losses I swore I wouldn't tell.But most of y'all share bars, like you got the bottom bunk in a two man cell",
+        description: "Everybody wanna cut the legs off him, Kunta Black man taking no losses I swore I wouldn't tell.But most of y'all share bars",
         price: 520
       },
       {
@@ -72,7 +72,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Taco Bell',
-        description: "When you got the yams (What's the yams?)The yam brought it out of Richard Pryor Manipulated Bill 24/7, 365 days times two I was contemplatin' gettin' on stage Just to go back to the",
+        description: "When you got the yams (What's the yams?)The yam brought it out of Richard Pryor Manipulated Bill 24/7, 365 days ",
         price: 670
       },
       {
@@ -84,7 +84,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Teeny Swod',
-        description: "I'm just a poor boy nobody loves me He's just a poor boy from a poor family, Spare him his life from this monstrosity Easy come, easy go, will you let me go",
+        description: "I'm just a poor boy nobody loves me He's just a poor boy from a poor family, Spare him his life from this monstrosity ",
         price: 330
       },
       {
