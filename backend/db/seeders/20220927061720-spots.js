@@ -24,7 +24,7 @@ module.exports = {
         lat: 37.7645358,
         lng: -122.4730327,
         name: 'McDonalds',
-        description: "Is this the real life? Is this just fantasy? Caught in a landside, No escape from reality Open your eyes, Look up to the skies and see, I'm just a poor boy, I need no sympathy, Because I'm easy come, easy go, Little high, little low, Any way the wind blows doesn't really matter to Me, to me",
+        description: "Is this the real life? Is this just fantasy? Caught in a landside, No escape from reality Open your eyes, Look up to the skies and see, I'm just a poor boy, I need no sympathy, Because I'm easy come, easy go",
         price: 500
       },
       {
