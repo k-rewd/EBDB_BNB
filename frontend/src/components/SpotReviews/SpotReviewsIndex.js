@@ -23,17 +23,6 @@ const SpotReviewIndex = () => {
   // console.log('spotReview2', spotReview)
 
 
-  //   reviews
-  // : 
-  // spotReviews
-  // : 
-  // Reviews
-  // : 
-  // Array(2)
-  // 0
-  // : 
-  // {id: 1, spotId: 1, userId: 1, review: 'this place sucks!', stars: 5, …}
-
   if(!newSpotReview) {
     return null
   } else {
@@ -42,8 +31,10 @@ const SpotReviewIndex = () => {
       <>
       <div>
         <ul>
-          <div className="spot-review-index-review">"{review.review}"</div>
+          <div>
+          <div >"{review.review}"</div>
           <div>- {review.User.firstName} {review.User.lastName}</div>
+          </div>
         </ul>
       </div>
       </>

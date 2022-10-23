@@ -26,14 +26,11 @@
   background-color: white;
 }
 
-.profile-dropdown-username {
-  right: px;
-}
-
 .button-style {
   border: none;
   background: transparent;
   width: 100%;
+  text-align: left;
 }
 
 .button-style:hover {
@@ -64,3 +61,7 @@
 .home-button {
   margin-left: 100%
 }
+
+/* .profile-dropdown-username {
+  right: px;
+} */

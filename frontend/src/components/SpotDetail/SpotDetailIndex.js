@@ -47,21 +47,26 @@ const SpotDetailIndex = () => {
             <img id="image" src={spotDetail.SpotImages[0].url} alt='img' />
           </div>
           <div id="details">
-            <div id="detail-title"><h2 >Property Hosted By {spotDetail.Owner.firstName}</h2></div>
+            <div id="detail-title">
+            <div><h2 >Property Hosted By {spotDetail.Owner.firstName}</h2></div>
+                <div id='night'>
+                <div className="spot-detail-price">${spotDetail.price} </div> <div>night</div>
+                </div>
+                </div>
             <div className="amenities">
               <div className="amenities-inline">
                 <img src="https://www.pngrepo.com/png/5402/180/calendar.png"
-                  alt='calendar' style={{ width: '20px' }} />
+                  alt='' style={{ width: '20px' }} />
                 <p>Free cancellations for 48 hours</p>
               </div>
               <div className="amenities-inline">
                 <img src="https://www.pngrepo.com/png/103301/180/location.png"
-                  alt='calendar' style={{ width: '20px' }} />
+                  alt='' style={{ width: '20px' }} />
                 <p>Almost 100% of recent guests gave the location a 5-star rating.</p>
               </div>
               <div className="amenities-inline">
                 <img src="https://www.pngrepo.com/png/401036/180/computer-desk-furniture-interior-work-space.png"
-                  alt='calendar' style={{ width: '20px' }} />
+                  alt='' style={{ width: '20px' }} />
                 <p>A private room with wifi that’s well-suited for working.</p>
               </div>
             </div>
@@ -71,7 +76,6 @@ const SpotDetailIndex = () => {
               <p style={{ margin: '5px' }}>Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
             </div>
             <div id="spot-description">{spotDetail.description}</div>
-            <div>{spotDetail.price}</div>
           </div>
           <div id="reviews">
             <div id='review-details-row'>
@@ -93,12 +97,3 @@ const SpotDetailIndex = () => {
 export default SpotDetailIndex
 
 
-{/* <ul>
-<div>{spotDetail.city}</div>
-<div>{spotDetail.address}</div>
-<div>{spotDetail.description}</div>
-<div>{spotDetail.price}</div>
-<img src={spotDetail.SpotImages[0].url} alt='img' />
-<div><SpotReviewIndex /></div>
-<div><ReviewFormModal /></div>
-</ul> */}

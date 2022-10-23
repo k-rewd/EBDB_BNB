@@ -55,12 +55,12 @@ function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          
-          <div><button className='demo-user' type='submit' onClick={() => {
+            <div><button type="submit">Log In</button></div>
+          <div><button className='demo-user' onClick={() => {
             setCredential("Childish")
             setPassword("password")
           }}>DEMO USER</button></div>
-          <button type="submit">Log In</button>
+          
         </div>
       </form>
     </div>

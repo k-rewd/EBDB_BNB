@@ -46,13 +46,13 @@ function ProfileButton({ user }) {
       {showMenu && (
         <div className="profile-dropdown">
           <div className="dropdown-top">
-            <div className="profile-dropdown-username">{user.username}</div>
-            <div>{user.email}</div>
-          </div>
-          <div><NavLink to="/current"><button className="button-style">My Spots</button></NavLink></div>
-          <div><NavLink to={"/reviews/current"}><button className="button-style">My Reviews</button></NavLink></div>
+            <div className="profile-dropdown-username"> Hello, {user.firstName}</div>
+          
+          <div><NavLink to="/current"><button className="button-style">Manage Listings</button></NavLink></div>
+          <div><NavLink to={"/reviews/current"}><button className="button-style">Manage Reviews</button></NavLink></div>
           <div>
             <button className="button-style" onClick={logout}>Log Out</button>
+          </div>
           </div>
         </div>
       )}

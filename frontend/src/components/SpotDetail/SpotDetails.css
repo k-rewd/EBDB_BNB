@@ -40,8 +40,8 @@
   object-fit: cover;
 
   border-radius: 15px;
-  width: 285px;
-  height: 270px;
+  /* width: 285px; */
+  /* height: 270px; */
   overflow: hidden;
 
   /* border: 2px solid red; */
@@ -50,16 +50,30 @@
 
 #detail-title {
   font-size: 20px;
-  border-bottom: 1px solid gray
+  border-bottom: 1px solid gray;
 }
 
 #details {
-  width: 80%;
+  width: 100%;
+  
   /* border: 2px solid red; */
   /* padding-left: 20px; */
   padding-bottom: 20px;
 
 }
+
+.spot-detail-price{
+font-weight: 600;
+text-align: right;
+}
+
+#night {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 5px;
+}
+
 .amenities {
   font-size: 14px;
   border-bottom: 1px solid gray;
@@ -88,12 +102,13 @@
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
+  height: 80px;
 
 }
 
 #reviews {
   width: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
 }
 
@@ -112,6 +127,8 @@
 
 #review-text {
   font-size: 14px;
+  overflow-wrap: break-word;
+  padding-right:5%;
 }
 
 

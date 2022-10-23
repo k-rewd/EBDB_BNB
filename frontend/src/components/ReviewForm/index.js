@@ -27,7 +27,7 @@ function ReviewFormModal() {
   return (
     <>
     {!userSpotReview && !updateReview && sessionUser && (
-      <button onClick={() => setShowModal(true)}>Leave Review</button>
+      <button className='review-pink-buttons' onClick={() => setShowModal(true)}>Leave Review</button>
     )}
     {showModal && (
       <Modal onClose={() => setShowModal(false)}>
