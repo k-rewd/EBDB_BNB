@@ -1,8 +1,17 @@
 #outer-most-my-spots {
-  width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: center;
-  border: 10px solid red;
+  justify-content:space-between;
+  /* border: 10px solid red; */
 }
 
+
+#my-spots-kelly {
+  width: 100%;
+}
+
+/* .frame-mySpots {
+
+}
+.my-spots-title-row {
+
+} */

@@ -29,7 +29,7 @@
   flex-direction: column;
 
 }
-#spot-price-night {
+.spot-price-night {
   display: flex;
   flex-direction: row;
   
@@ -38,7 +38,7 @@
   font-weight: 600; 
   margin-right: 5px;
 }
-#cityState-avgRating-flex-row {
+.cityState-avgRating-flex-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -46,7 +46,7 @@ function ProfileButton({ user }) {
       {showMenu && (
         <div className="profile-dropdown">
           <div className="dropdown-top">
-            <div>{user.username}</div>
+            <div className="profile-dropdown-username">{user.username}</div>
             <div>{user.email}</div>
           </div>
           <div><NavLink to="/current"><button className="button-style">My Spots</button></NavLink></div>

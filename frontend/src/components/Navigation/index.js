@@ -42,10 +42,10 @@ function Navigation({ isLoaded }) {
     );
   } else {
     sessionLinks = (
-      <>
+      <div className='login-sign-up-row'>
         <LoginFormModal />
         <NavLink to="/signup">Sign Up</NavLink>
-      </>
+      </div>
     );
   }
 

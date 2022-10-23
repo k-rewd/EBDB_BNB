@@ -1,0 +1,27 @@
+.sign-up-outer-most {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sign-up-form-content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.pink-buttons {
+  width: 100%;
+}
+
+#welcome {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-errors {
+
+}

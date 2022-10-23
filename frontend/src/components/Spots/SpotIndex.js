@@ -28,12 +28,13 @@ const SpotIndex = () => {
       <div id="outer-most-spots">
         <div className="frame">
           {Object.values(spots).map(spot => (
+            <div key={spot.id}>
             <NavLink to={`/spots/${spot.id}`} >
               <div className="spot-card-flex-column">
                 <div>
                   <img className="spot-image" src={spot.previewImage} alt='img' />
                 </div>
-                <div id="cityState-avgRating-flex-row">
+                <div className="cityState-avgRating-flex-row">
                   <div>
                     {spot.city}, {spot.state}
                   </div>
@@ -47,7 +48,7 @@ const SpotIndex = () => {
                 <div>
                   {spot.address}
                 </div>
-                <div id="spot-price-night">
+                <div className="spot-price-night">
                   <div id="spot-price">
                     $ {spot.price}
                   </div>
@@ -57,6 +58,7 @@ const SpotIndex = () => {
                 </div>
               </div>
             </NavLink>
+          </div>
           ))}
         </div>
       </div>

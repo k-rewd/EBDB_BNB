@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux"
 import { NavLink } from 'react-router-dom'
 import { currOwnerSpots, spotRemove } from "../../store/spots"
 import EditSpotModal from "../EditSpotModal/EditSpotIndex"
+import '../Spots/SpotIndex.css'
 import './MySpots.css'
 
 const MySpotsIndex = () => {
   const userSpots = useSelector(state => state.spots.allSpots)
+  // const spotOwner = useSelector(state => state.session.user)
+  
   // const user = useSelector((state) => state.session.user)
   const dispatch = useDispatch()
 
@@ -25,31 +28,53 @@ const MySpotsIndex = () => {
   // console.log('lookatme', objValue)
   // const filtered = objValue.filter(spot => spot.ownerId === user.id)
 
-
-  if (!Object.values(userSpots).length) return null
-
-  return (Object.values(userSpots).map(spot => {
-
-    return (
-          <div key={spot.id}>
-            
-            <NavLink to={`/spots/${spot.id}`}>
-              <div>
-                <ul>
-                  <li>{spot.city}</li>
-                  <li>{spot.address}</li>
-                  <li>{spot.price}</li>
-                  <img src={spot.previewImage} alt='img' />
-                </ul>
+{/* <div className="my-spots-title-row"><h1 id="my-spots-kelly">{spotOwner.firstName}'s Spots</h1></div> */}
+  if (!Object.values(userSpots).length) {
+    return null
+  } else {
+  return (Object.values(userSpots).map(spot => (
+    
+    <div id="outer-most-my-spots">
+      <div className="frame-mySpots">
+      <div key={spot.id}>
+        <NavLink to={`/spots/${spot.id}`}>
+          
+              <div className="spot-card-flex-column">
+                <div>
+                  <img className="spot-image" src={spot.previewImage} alt='img' />
+                </div>
+                <div className="cityState-avgRating-flex-row">
+                  <div>
+                    {spot.city}, {spot.state}
+                  </div>
+                  <div>
+                  ★{spot.avgRating}
+                  </div>
+                </div>
+                <div>
+                  {spot.name}
+                </div>
+                <div>
+                  {spot.address}
+                </div>
+                <div className="spot-price-night">
+                  <div id="spot-price">
+                    $ {spot.price}
+                  </div>
+                  <div id="spot-night"> night</div>
+                </div>
               </div>
-            </NavLink>
-            <button onClick={() => { dispatch(spotRemove(spot.id)) }}>DELETE</button>
-            {/* .then(()=>dispatch(currOwnerSpots())) */}
-            <EditSpotModal spot={spot} />
-          </div>
-
-    )
-  }))
+        </NavLink>
+        <div id="delete-edit">
+        <button onClick={() => { dispatch(spotRemove(spot.id)) }}>DELETE</button>
+        {/* .then(()=>dispatch(currOwnerSpots())) */}
+        <EditSpotModal spot={spot} />
+        </div>
+      </div>
+    </div>
+    </div>
+  )))
+  }
 }
 
 export default MySpotsIndex
