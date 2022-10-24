@@ -8,7 +8,7 @@ import './MySpots.css'
 
 const MySpotsIndex = () => {
   const userSpots = useSelector(state => state.spots.allSpots)
-  // const spotOwner = useSelector(state => state.session.user)
+  const spotOwner = useSelector(state => state.session.user)
   
   // const user = useSelector((state) => state.session.user)
   const dispatch = useDispatch()
@@ -28,16 +28,16 @@ const MySpotsIndex = () => {
   // console.log('lookatme', objValue)
   // const filtered = objValue.filter(spot => spot.ownerId === user.id)
 
-{/* <div className="my-spots-title-row"><h1 id="my-spots-h1">{spotOwner.firstName}'s Spots</h1></div> */}
   if (!Object.values(userSpots).length) {
     return null
   } else {
-  return (Object.values(userSpots).map(spot => (
-    
-    <div id="outer-most-my-spots">
+    return (Object.values(userSpots).map(spot => (
+      
+      <div id="outer-most-my-spots">
       <div className="frame-mySpots">
       <div key={spot.id}>
         <NavLink to={`/spots/${spot.id}`}>
+        {/* <div className="my-spots-title-row"><h1 id="my-spots-h1">{spotOwner.firstName}'s Spots</h1></div> */}
           
               <div className="spot-card-flex-column">
                 <div>
@@ -66,7 +66,7 @@ const MySpotsIndex = () => {
               </div>
         </NavLink>
         <div id="delete-edit">
-        <button onClick={() => { dispatch(spotRemove(spot.id)) }}>DELETE</button>
+        <button className='editspot-pink-buttons' onClick={() => { dispatch(spotRemove(spot.id)) }}>DELETE</button>
         {/* .then(()=>dispatch(currOwnerSpots())) */}
         <EditSpotModal spot={spot} />
         </div>

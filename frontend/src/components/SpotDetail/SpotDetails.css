@@ -70,7 +70,7 @@ text-align: right;
 #night {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 5px;
 }
 
@@ -94,7 +94,6 @@ text-align: right;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
-  
 }
 
 #spot-description {

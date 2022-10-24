@@ -1,13 +1,15 @@
 #outer-most-my-spots {
+  margin-top: 50px;
+  margin-left: 50px;
   display: flex;
-  justify-content:space-between;
-  border: 10px solid red;
+  justify-content: flex-start;
+  /* border: 10px solid red; */
 }
 
 
-#my-spots-h1 {
+/* #my-spots-h1 {
   width: 100%;
-}
+} */
 
 /* .frame-mySpots {
 

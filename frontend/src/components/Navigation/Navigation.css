@@ -65,3 +65,7 @@
 /* .profile-dropdown-username {
   right: px;
 } */
+
+.icon-drop-menu {
+  cursor: pointer;
+}

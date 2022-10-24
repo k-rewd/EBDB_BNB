@@ -39,7 +39,7 @@ function ProfileButton({ user }) {
     <>
       <div className="dropdown-createspot">
       <div><CreateSpotModal /></div>
-        <button onClick={openMenu}>
+        <button className='icon-drop-menu'onClick={openMenu}>
           <i className="fas fa-user-circle" />
         </button>
       </div>
