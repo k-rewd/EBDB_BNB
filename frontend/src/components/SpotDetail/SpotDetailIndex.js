@@ -44,7 +44,7 @@ const SpotDetailIndex = () => {
             </div>
           </div>
           <div>
-            <img id="image" src={spotDetail.SpotImages[0].url} alt='img' />
+            <img id="image" onError={(e)=> e.target.src="https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} alt='img' />
           </div>
           <div id="details">
             <div id="detail-title">

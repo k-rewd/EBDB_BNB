@@ -23,10 +23,12 @@ function SignupFormPage() {
   useEffect(() => {
     const errors = []
     if (!firstName) errors.push('Name required')
+    if (firstName.length < 2 || firstName.length > 15) errors.push('First name char. limit(min:2, max:15)')
     if (!lastName) errors.push('Last name required')
+    if (lastName.length <2 || lastName.length > 10) errors.push('Last name char. limit(min:2, max:15)')
     if (!email) errors.push('Email required')
     if (!username) errors.push('Username required')
-    else if (username < 5 || username > 20) errors.push('Username character limite(mix:5, max 20')
+    else if (username < 5 || username > 20) errors.push('Username character limit(mix:5, max:20')
     if (!password) errors.push('Password required')
     if (!confirmPassword) errors.push('Please confirm password')
     if (password !== confirmPassword) errors.push('Passwords do not match')
@@ -72,6 +74,8 @@ function SignupFormPage() {
           <input
             placeholder="First Name"
             type="text"
+            min='2'
+            max='15'
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required />
@@ -79,6 +83,8 @@ function SignupFormPage() {
 
           <input
             placeholder="Last Name"
+            min='2'
+            max='10'
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}

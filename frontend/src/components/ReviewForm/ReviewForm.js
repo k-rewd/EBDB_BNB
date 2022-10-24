@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { createReviewThunk, getSpotReviewsThunk } from '../../store/reviews';
+import { spotOne } from '../../store/spots';
 // import * as sessionActions from '../../store/session'; //
 import './ReviewForm.css'
 
@@ -50,8 +51,11 @@ const ReviewForm = ({ setShowModal }) => {
       // console.log('createdreview', createdReview)
 
       if (createdReview) {
+        await dispatch(getSpotReviewsThunk(spotId))
+        await dispatch(spotOne(spotId))
+        setShowModal(false)
+        
         // history.push(`/spots/${createdReview.id}`)
-        await dispatch(getSpotReviewsThunk(spotId)).then(() => setShowModal(false))
         setErrors(false)
       }
     }

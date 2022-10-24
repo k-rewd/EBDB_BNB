@@ -32,7 +32,7 @@ const SpotIndex = () => {
             <NavLink to={`/spots/${spot.id}`} >
               <div className="spot-card-flex-column">
                 <div>
-                  <img className="spot-image" src={spot.previewImage} alt='img' />
+                  <img onError={(e)=> e.target.src="https://cdn-icons-png.flaticon.com/512/70/70644.png"}className="spot-image" src={spot.previewImage} alt='img' />
                 </div>
                 <div className="cityState-avgRating-flex-row">
                   <div className="city-state">

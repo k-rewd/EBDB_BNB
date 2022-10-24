@@ -162,7 +162,7 @@ const spotReducer = (state = initialState, action) => {
       return newState
 
     case ONE_SPOT:
-      newState = { ...initialState, singleSpot: {...state.singleSpot}} // change to state maybe
+      newState = { ...state, singleSpot: {...state.singleSpot}} // change to state maybe
       
       newState.singleSpot = { ...action.spot }
       return newState
