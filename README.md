@@ -38,7 +38,7 @@ EBDBBnB can be tested by clicking the "Demo User" button.
 
 1. Clone my repository or download zip:
 ```
-https://github.com/k-rewd/EBDB_BNB.git
+https://github.com/k-rewd/EBDB_BNB
 ```
 2. Terminal: Install dependencies in both front end and backend:
 ```
