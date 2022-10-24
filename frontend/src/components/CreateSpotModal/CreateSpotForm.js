@@ -57,7 +57,7 @@ const CreateSpotForm = ({ setShowModal }) => {
     else if (description.length > 255) errors.push('Description: Character limit(0~255)')
     if (!price) errors.push('Price per night is required')
     else if (price > 999999) errors.push('Too expensive')
-    if (!url || !url.match(/^https?:\/\/.*\/.*\.(png|gif|webp|jpeg|jpg)\??.*$/gmi)) errors.push('Valid image url required')
+    if (!url) errors.push('Valid image url required')
 
     setValidationErrors(errors)
   }, [address, city, state, country, name, description, price, url])
