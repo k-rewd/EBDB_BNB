@@ -51,11 +51,11 @@ function SignupFormPage() {
             // console.log('data!!!', data)
             // if (data && data.message) setErrors([data.message])
           });
-      }
+      } else {
     // console.log('errorrrrss', errors)
     setFrontErrors(false)
     return setErrors(['Confirm Password field must be the same as the Password field']);
-
+      }
   };
 
   return (
