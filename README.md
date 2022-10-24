@@ -23,5 +23,16 @@ EBDBBnB can be used to create, view, edit, delete spots as well as to create, re
 - [Feature List](https://github.com/k-rewd/EBDB_BNB/wiki/Feature-List)
 - [REDUX Store Shape](https://github.com/k-rewd/EBDB_BNB/wiki/REDUX-Store-Shape)
 
+This project is built with:
+JavaScript
+PostgresSQl
+Sequelize
+Express
+React
+Redux
+
+<h1>Features Directions</h1>
+EBDBBnB can be tested by clicking the "Demo User" button.
+
 
 
