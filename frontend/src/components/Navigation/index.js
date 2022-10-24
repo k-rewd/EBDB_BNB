@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
-import CreateSpotModal from '../CreateSpotModal';
+// import CreateSpotModal from '../CreateSpotModal';
 // import UserSpotsIndex from '../UserSpots/UserSpotsIndex';
 import './Navigation.css';
 

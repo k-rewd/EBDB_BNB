@@ -62,7 +62,7 @@ const SpotDetailIndex = () => {
               <div className="amenities-inline">
                 <img src="https://www.pngrepo.com/png/103301/180/location.png"
                   alt='' style={{ width: '20px' }} />
-                <p>Almost 100% of recent guests gave the location a 5-star rating.</p>
+                <p>Location available on Google Maps, Waze, etc.</p>
               </div>
               <div className="amenities-inline">
                 <img src="https://www.pngrepo.com/png/401036/180/computer-desk-furniture-interior-work-space.png"

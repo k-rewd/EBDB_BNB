@@ -43,7 +43,7 @@ const MySpotsIndex = () => {
           
               <div >
                 <div>
-                  <img className="my-spot-image" src={spot.previewImage} alt='img' />
+                  <img className="my-spot-image" onError={(e)=> e.target.src="https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spot.previewImage} alt='img' />
                 </div>
                 <div className="cityState-avgRating-flex-row">
                   <div>

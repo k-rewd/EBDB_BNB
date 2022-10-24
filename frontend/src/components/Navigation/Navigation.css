@@ -51,6 +51,10 @@
   background: rgb(240, 240, 240);
 }
 
+#drop-menu-icon-style {
+  width: 20px;
+  border: 2px solid rgb(105, 105, 105);
+}
 
 
 .dropdown-createspot {
