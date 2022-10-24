@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { spotAdd } from '../../store/spots';
+import '../SignupFormPage/SignupForm.css'
+import './CreateSpotForm.css'
 
 // prop {setShowModal} //
 const CreateSpotForm = ({ setShowModal }) => {
@@ -40,21 +42,21 @@ const CreateSpotForm = ({ setShowModal }) => {
   useEffect(() => {
     const errors = []
     if (!address) errors.push('Invalid address')
-    else if (address.length > 20 ) errors.push('Address: Character limit(max 20)')
+    else if (address.length > 20) errors.push('Address: Character limit(max 20)')
     if (!city) errors.push('Invalid city')
-    else if (city.length > 20 ) errors.push('City: Character limit(max 20)')
+    else if (city.length > 20) errors.push('City: Character limit(max 20)')
     if (!state) errors.push('Invalid state')
-    else if (state.length < 2 || state.length > 20 ) errors.push('State: Character limit(2~20)')
+    else if (state.length < 2 || state.length > 20) errors.push('State: Character limit(2~20)')
     if (!country) errors.push('Invalid country')
-    else if (country.length > 20 ) errors.push('Country: Character limit(max 20)')
+    else if (country.length > 20) errors.push('Country: Character limit(max 20)')
     if (!name) errors.push('Name is required')
     else if (name.length > 20) errors.push('Name: Character limit(max 20)')
     // else if (name.length > 20) errors.push('Name must be 20 characters or less')
     // else if (name.length < 5) errors.push('Name must be 5 characters or more')
     if (!description) errors.push('Description is required')
-    else if (description.length > 255 ) errors.push('Description: Character limit(0~255)')
+    else if (description.length > 255) errors.push('Description: Character limit(0~255)')
     if (!price) errors.push('Price per night is required')
-    else if (price > 999999 ) errors.push('Too expensive')
+    else if (price > 999999) errors.push('Too expensive')
     if (!url) errors.push('Valid image url required')
     setValidationErrors(errors)
   }, [address, city, state, country, name, description, price, url])
@@ -64,33 +66,33 @@ const CreateSpotForm = ({ setShowModal }) => {
     setErrors(true)
 
     if (!validationErrors.length) {
-    const payload = {
-      address,
-      city,
-      state,
-      country,
-      name,
-      // lat,
-      // lng,
-      description,
-      price,
-      url,
-      preview: true
-    }
+      const payload = {
+        address,
+        city,
+        state,
+        country,
+        name,
+        // lat,
+        // lng,
+        description,
+        price,
+        url,
+        preview: true
+      }
 
-    let createdSpot = await dispatch(spotAdd(payload))
+      let createdSpot = await dispatch(spotAdd(payload))
       // console.log('BEFOREcreated', createdSpot)
 
-    if (createdSpot) {
-      // console.log('AFTERcreated', createdSpot)
-      history.push(`/spots/${createdSpot.id}`)
-      // history.push(`/current`)
-      // return <Redirect to={`/spots/${createdSpot.id}`}/>
-      setErrors(false)
-      setShowModal(false)
+      if (createdSpot) {
+        // console.log('AFTERcreated', createdSpot)
+        history.push(`/spots/${createdSpot.id}`)
+        // history.push(`/current`)
+        // return <Redirect to={`/spots/${createdSpot.id}`}/>
+        setErrors(false)
+        setShowModal(false)
+      }
     }
   }
-}
 
   // const handleCancelClick = (e) => {
   //   e.preventDefault();
@@ -98,67 +100,55 @@ const CreateSpotForm = ({ setShowModal }) => {
   // };
 
   return (
-    <div>
-      <section>
+    <div className='createspot-form-modal'>
+
+      <div className="createspot-outer-most">
         <form onSubmit={handleSubmit}>
-        
-          <ul>
-              {errors && validationErrors.length > 0 && validationErrors.map(error => (
-                <li className="error-messages" key={error}>{error}</li>))}
-          </ul>
-          <label>Address</label>
+          <h2 id="welcome-spot">Create a Listing</h2>
+
+          <div className="createspot-content-area">
             <input
               type='text'
               placeholder='Address'
               value={address}
               onChange={updateAddress} />
-          
-          <label>City</label>
+
+
             <input
               type='text'
               placeholder='City'
               value={city}
               onChange={updateCity} />
-          
-          <label>State</label>
+
+
             <input
               type='text'
               placeholder='State'
               value={state}
               onChange={updateState} />
-          
-          <label>Country</label>
+
+
             <input
               type='text'
               placeholder='Country'
               value={country}
               onChange={updateCountry} />
-          
-          <label>Name</label>
+
+
             <input
               type='text'
               placeholder='Name'
               value={name}
               onChange={updateName} />
-          
-          {/* <input
-          type='number'
-          placeholder='L'
-          value={address}
-          onChange={updateLng}/>
-                    <input
-          type='text'
-          placeholder='Address'
-          value={address}
-          onChange={updateLng}/> */}
-          <label>Description</label>
+
+
             <input
               type='text'
               placeholder='Description'
               value={description}
               onChange={updateDescription} />
-          
-          <label>Price</label>
+
+
             <input
               type='number'
               placeholder='Price'
@@ -166,19 +156,28 @@ const CreateSpotForm = ({ setShowModal }) => {
               min='0'
               max='999999'
               onChange={updatePrice} />
-          
-          <label>Image(URL)</label>
+
+
             <input
               type='text'
-              placeholder='image url'
+              placeholder='Image (URL)'
               value={url}
-              onChange={updateURL}/>
-          
-          <button type="submit">Create New Spot</button>
-          {/* <button type="button" onClick={handleCancelClick}>Cancel</button> */}
+              onChange={updateURL} />
+
+
+            <button className="createspot-pink-buttons" type="submit">Create New Spot</button>
+            {/* <button type="button" onClick={handleCancelClick}>Cancel</button> */}
+          </div>
+          <div className="create-errors">
+            <ul >
+              {errors && validationErrors.length > 0 && validationErrors.map(error => (
+                <li className="error-messages" key={error}>{error}</li>))}
+            </ul>
+          </div>
         </form>
-      </section>
+      </div>
     </div>
+
   )
 }
 

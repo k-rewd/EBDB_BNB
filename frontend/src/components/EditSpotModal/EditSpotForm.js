@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { spotEdit } from '../../store/spots';
+import './EditSpotForm.css'
 
 // prop {setShowModal} //
 const EditSpotForm = ({ spot, setShowModal }) => {
@@ -46,7 +47,7 @@ const EditSpotForm = ({ spot, setShowModal }) => {
     if (!name) errors.push('Name is required')
     else if (name.length > 20) errors.push('Name: Character limit(max 20)')
     if (!description) errors.push('Description is required')
-    else if (description.length > 100) errors.push('Description: Character limit(max 100)')
+    else if (description.length > 255) errors.push('Description: Character limit(0~255)')
     if (!price) errors.push('Price per night is required')
     else if (price > 999999) errors.push('Too expensive')
     setValidationErrors(errors)
@@ -93,77 +94,75 @@ const EditSpotForm = ({ spot, setShowModal }) => {
   // };
 
   return (
-    <div>
-      <section>
+    <div className='editspot-form-modal'>
+      <div className="editspot-outer-most">
 
         <form onSubmit={handleSubmit}>
-          <ul>
-            {errors && validationErrors.length > 0 && validationErrors.map(error => (
-              <li key={error}>{error}</li>))}
-          </ul>
-          <label>
+        <h2 id="welcome-edit">Edit a Listing</h2>
+          
+        <div className="editspot-content-area">
+
             <input
               type='text'
               placeholder='Address'
               value={address}
               onChange={updateAddress} />
-          </label>
-          <label>
+          
+          
             <input
               type='text'
               placeholder='City'
               value={city}
               onChange={updateCity} />
-          </label>
-          <label>
+          
+          
             <input
               type='text'
               placeholder='State'
               value={state}
               onChange={updateState} />
-          </label>
-          <label>
+          
+          
             <input
               type='text'
               placeholder='Country'
               value={country}
               onChange={updateCountry} />
-          </label>
-          <label>
+          
+          
             <input
               type='text'
               placeholder='Name'
               value={name}
               onChange={updateName} />
-          </label>
-          {/* <input
-          type='number'
-          placeholder='L'
-          value={address}
-          onChange={updateLng}/>
-                    <input
-          type='text'
-          placeholder='Address'
-          value={address}
-          onChange={updateLng}/> */}
-          <label>
+  
+          
             <input
               type='text'
               placeholder='Description'
               value={description}
               onChange={updateDescription} />
-          </label>
-          <label>
+          
+          
             <input
               type='number'
               placeholder='Price'
               value={price}
+              min='0'
+              max='999999'
               onChange={updatePrice} />
-          </label>
-          <button type="submit">Edit</button>
+          
+          <button className="editspot-pink-buttons" type="submit">Edit</button>
           {/* <button type="button" onClick={handleCancelClick}>Cancel</button> */}
+          <div className='edit-spot-errors'>
+            <ul>
+              {errors && validationErrors.length > 0 && validationErrors.map(error => (
+                <li className='error-messages' key={error}>{error}</li>))}
+            </ul>
+          </div>
+          </div>
         </form>
-      </section>
+      </div>
     </div>
   )
 }

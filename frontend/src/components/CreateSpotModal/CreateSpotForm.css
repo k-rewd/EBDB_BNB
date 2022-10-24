@@ -1,3 +1,18 @@
+.createspot-form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+  gap: 20px;
+  margin-top: 25px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  border-radius: 14px;
+  background: transparent;
+}
+
 .createSpotModal-button {
   background-color: transparent;
   border: none;
@@ -7,3 +22,29 @@
   cursor: pointer;
 }
 
+.createspot-outer-most {
+  width: 100%;
+}
+
+.createspot-content-area {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+}
+
+.createspot-pink-buttons {
+  width: 100%;
+  background-color: #FF385C;
+  color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+}
+
+.create-errors {
+  color: red;
+}
+#welcome-spot {
+  display: flex;
+  justify-content: center;
+}

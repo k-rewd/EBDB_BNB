@@ -9,7 +9,7 @@ function SignupFormPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user)
 
-  
+
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState("");
@@ -19,37 +19,37 @@ function SignupFormPage() {
   const [errors, setErrors] = useState([]);
   const [validationErrors, setValidationErrors] = useState([])
   const [frontErrors, setFrontErrors] = useState(false)
-  
+
   useEffect(() => {
     const errors = []
     if (!firstName) errors.push('Name required')
     if (!lastName) errors.push('Last name required')
     if (!email) errors.push('Email required')
     if (!username) errors.push('Username required')
-    else if(username < 5 || username > 20) errors.push('Username character limite(mix:5, max 20')
+    else if (username < 5 || username > 20) errors.push('Username character limite(mix:5, max 20')
     if (!password) errors.push('Password required')
     if (!confirmPassword) errors.push('Please confirm password')
     if (password !== confirmPassword) errors.push('Passwords do not match')
     setValidationErrors(errors)
   }, [firstName, lastName, email, username, password, confirmPassword])
-  
+
   if (sessionUser) return <Redirect to="/" />
-  
+
   // console.log('firing')
   const handleSubmit = (e) => {
     e.preventDefault();
     setFrontErrors(true)
     if (!validationErrors.length) // maybe delete
-    if (password === confirmPassword) {
-      setErrors([]);
-      return dispatch(sessionActions.signup({ firstName, lastName, email, username, password }))
-      .catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-        // console.log('data!!!', data)
-        // if (data && data.message) setErrors([data.message])
-      });
-    }
+      if (password === confirmPassword) {
+        setErrors([]);
+        return dispatch(sessionActions.signup({ firstName, lastName, email, username, password }))
+          .catch(async (res) => {
+            const data = await res.json();
+            if (data && data.errors) setErrors(data.errors);
+            // console.log('data!!!', data)
+            // if (data && data.message) setErrors([data.message])
+          });
+      }
     // console.log('errorrrrss', errors)
     setFrontErrors(false)
     return setErrors(['Confirm Password field must be the same as the Password field']);
@@ -70,7 +70,7 @@ function SignupFormPage() {
         <div className="sign-up-form-content-area">
 
           <input
-          placeholder="First Name"
+            placeholder="First Name"
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
@@ -78,7 +78,7 @@ function SignupFormPage() {
 
 
           <input
-          placeholder="Last Name"
+            placeholder="Last Name"
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
@@ -86,7 +86,7 @@ function SignupFormPage() {
 
 
           <input
-          placeholder="Email"
+            placeholder="Email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -94,7 +94,7 @@ function SignupFormPage() {
 
 
           <input
-          placeholder="Username"
+            placeholder="Username"
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -102,7 +102,7 @@ function SignupFormPage() {
 
 
           <input
-          placeholder="Password"
+            placeholder="Password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -110,7 +110,7 @@ function SignupFormPage() {
 
 
           <input
-          placeholder="Confirm Password"
+            placeholder="Confirm Password"
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
