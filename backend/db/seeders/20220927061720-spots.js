@@ -24,7 +24,7 @@ module.exports = {
         lat: 37.7645358,
         lng: -122.4730327,
         name: 'McDonalds',
-        description: "Is this the real life? Is this just fantasy? Caught in a landside, No escape from reality Open your eyes",
+        description: "¿Dónde está la biblioteca? Me llamo T-Bone, la araña discoteca Discoteca, muñeca, la biblioteca Es el bigote grande, el perro, manteca",
         price: 500
       },
       {
@@ -36,7 +36,7 @@ module.exports = {
         lat: 39.7645358,
         lng: -124.4730327,
         name: 'Jack in the Box',
-        description: "Mamaaa, life had just begun, But now I've gone and thrown it all away Mama, oooh, Didn't mean to make you cry, ",
+        description: "Manteca, bigote, gigante, pequeño Cabeza es nieve, cerveza es bueno",
         price: 400
       },
       {
@@ -48,7 +48,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'In N Out',
-        description: "Too late, my time has come, Sends shivers down my spine, body's aching all The time Goodbye, everybody,",
+        description: "Buenos días, me gustas papas frías Bigote de la cabra ¡es Cameron Diaz!",
         price: 350
       },
       {
