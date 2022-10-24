@@ -1,0 +1,55 @@
+.add-review-pink-button {
+  width: 100%;
+  background-color: #FF385C;
+  color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+}
+
+.review-error-messages {
+  color: red;
+}
+
+.review-form-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  gap: 20px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  border-radius: 14px;
+  background: transparent;
+}
+
+.review-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.stars-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.star-input-row {
+  display: flex;
+}
+
+
+.review-star-input {
+  width: 30px;
+}
+
+.text-area-review {
+  resize: none;
+  height: 300px;
+  width: 300px;
+}

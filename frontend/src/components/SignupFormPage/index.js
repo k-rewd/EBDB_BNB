@@ -59,7 +59,7 @@ function SignupFormPage() {
   return (
     <div className="sign-up-outer-most">
       <form onSubmit={handleSubmit} >
-        <h4 id="welcome"> Welcome to the Eskimo Brothers Data Base Bed & Breakfast</h4>
+        <h4 id="welcome"> Welcome to the EBDB Bed & Breakfast</h4>
         <ul className="sign-up-errors">
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import { useHistory, useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import { createReviewThunk, getSpotReviewsThunk } from '../../store/reviews';
 // import * as sessionActions from '../../store/session'; //
+import './ReviewForm.css'
 
 
 const ReviewForm = ({ setShowModal }) => {
 
   const dispatch = useDispatch()
-  const history = useHistory()
+  // const history = useHistory()
   const { spotId } = useParams()
   // const sessionUser = useSelector(state => state.session.user); //
 
@@ -16,14 +17,14 @@ const ReviewForm = ({ setShowModal }) => {
   const [review, setReview] = useState('');
   const [stars, setStars] = useState(1)
   const [validationErrors, setValidationErrors] = useState([])
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState(false)
 
   const updateReview = (e) => setReview(e.target.value);
   const updateStar = (e) => setStars(e.target.value);
 
   useEffect(() => {
     const errors = []
-    if (review.length > 255) errors.push('Review: Character limit(255)')
+    if (!review || review.length > 255) errors.push('Tells us about your stay! Character limit(255)')
     if (!spotId) errors.push("Review couldn't be found")
     setValidationErrors(errors)
   }, [review, spotId])
@@ -32,67 +33,64 @@ const ReviewForm = ({ setShowModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors(true)
-    
-if(!validationErrors.length) {
-    const payload = {
-      review,
-      stars
-    }
-    
 
-    let createdReview = await dispatch(createReviewThunk(spotId, payload))
-    // .then(() => setShowModal(false))
-    // .catch(async (res) => {
-    //   const data = await res.json();
-    //   if (data && data.errors) setErrors(data.errors)
-    // })
-    // console.log('createdreview', createdReview)
+    if (!validationErrors.length) {
+      const payload = {
+        review,
+        stars
+      }
 
-    if (createdReview) {
-      // history.push(`/spots/${createdReview.id}`)
-      await dispatch(getSpotReviewsThunk(spotId)).then(() => setShowModal(false))
-    }
+
+      let createdReview = await dispatch(createReviewThunk(spotId, payload))
+      // .then(() => setShowModal(false))
+      // .catch(async (res) => {
+      //   const data = await res.json();
+      //   if (data && data.errors) setErrors(data.errors)
+      // })
+      // console.log('createdreview', createdReview)
+
+      if (createdReview) {
+        // history.push(`/spots/${createdReview.id}`)
+        await dispatch(getSpotReviewsThunk(spotId)).then(() => setShowModal(false))
+        setErrors(false)
+      }
     }
   }
 
   return (
-    <>
-      <div>
-        <section>
+    <div>
+      <h1 className='review-title'>Review Here</h1>
+      <div className='review-form-modal'>
+        <div>
           <form onSubmit={handleSubmit}>
-          <ul>
-            {errors && validationErrors.length > 0 && validationErrors.map(error => (
-              <li key={error}>{error}</li>))}
-          </ul>
-            {/* <div>
-              {errors.map((err, i) => 
-              <ul className='review-errors' key={i}>
-                {err}
-                </ul>
-              )}
-              </div> */}
-            
-            <label>
-              <input
-                type='number'
-                min='1'
-                max='5'
-                placeholder='rating'
-                value={stars}
-                onChange={updateStar} />
-            </label>
-            <label>
-              <input
+
+            <div className='stars-review'>
+              <textarea
+                className='text-area-review'
                 type='text'
-                placeholder='Say Something ......'
+                placeholder='Tells us about your experience...!'
                 value={review}
                 onChange={updateReview} />
-            </label>
-            <button type="submit">Submit</button>
+              <div className='star-input-row'>
+                <label>★</label>
+                <input
+                  className='review-star-input'
+                  type='number'
+                  min='1'
+                  max='5'
+                  value={stars}
+                  onChange={updateStar} />
+              </div>
+              <button className="add-review-pink-button" type="submit">Submit</button>
+            </div>
           </form>
-        </section>
+          <ul>
+            {errors && validationErrors.length > 0 && validationErrors.map(error => (
+              <li className='review-error-messages' key={error}>{error}</li>))}
+          </ul>
+        </div>
       </div>
-    </>
+    </div>
   )
 
 
