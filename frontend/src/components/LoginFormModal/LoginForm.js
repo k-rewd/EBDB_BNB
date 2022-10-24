@@ -30,37 +30,55 @@ function LoginForm() {
 
   return (
     <div className='login-form-modal'>
-      <div className="welcome-message">Welcome to the EBDB BnB</div>
+      <h2 className="welcome-message">Welcome to the EBDB BnB</h2>
       <form onSubmit={handleSubmit}>
+        <div className='user-input-action-button'>
+
+
+
+
+          
+            {/* <label className='input-prompt-label'> Username or Email </label> */}
+            <input className='login-username-email'
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              placeholder="Username or Email"
+              
+              />
+              
+         
+
+          
+            {/* <label className='input-prompt-label'> Password</label> */}
+            <input className='login-password'
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+               />
+          
+
+
+
+          <div className='two-buttons-row'>
+            <div><button className='pink-buttons' type="submit">Log In</button></div>
+            <div><button className='pink-buttons' onClick={() => {
+              setCredential("Childish")
+              setPassword("password")
+            }}>DEMO USER</button>
+            </div>
+          </div>
+        </div>
+
+
+
         <div className="error-message-container">
           <ul>
             {errors.map((error, idx) => (
               <li className="error-messages" key={idx}>{error}</li>
             ))}
           </ul>
-        </div>
-        <div className='user-input-action-button'>
-          <label className='input-prompt-label'>
-            Username or Email </label>
-            <input
-              type="text"
-              value={credential}
-              onChange={(e) => setCredential(e.target.value)}
-            />
-          
-          <label className='input-prompt-label'>
-            Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <div><button type="submit">Log In</button></div>
-          <div><button className='demo-user' onClick={() => {
-            setCredential("Childish")
-            setPassword("password")
-          }}>DEMO USER</button></div>
-          
         </div>
       </form>
     </div>

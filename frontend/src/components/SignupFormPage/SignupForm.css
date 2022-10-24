@@ -10,10 +10,11 @@
   flex-direction: column;
   align-content: center;
   height: 100%;
-  gap: 1px;
 }
 
-.pink-buttons {
+.sign-up-jin-pink-buttons {
+
+
   width: 100%;
   background-color: #FF385C;
   color: white;
@@ -28,5 +29,5 @@
 }
 
 .sign-up-errors {
-
+  color: red;
 }
