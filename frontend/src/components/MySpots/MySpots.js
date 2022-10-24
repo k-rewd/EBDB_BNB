@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { NavLink } from 'react-router-dom'
 import { currOwnerSpots, spotRemove } from "../../store/spots"
@@ -8,13 +8,15 @@ import './MySpots.css'
 
 const MySpotsIndex = () => {
   const userSpots = useSelector(state => state.spots.allSpots)
-  const spotOwner = useSelector(state => state.session.user)
+  // const spotOwner = useSelector(state => state.session.user)
   
+  const [isLoaded, setIsLoaded] = useState(false)
+
   // const user = useSelector((state) => state.session.user)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(currOwnerSpots())
+    dispatch(currOwnerSpots()).then(() => setIsLoaded(true))
   }, [dispatch])
 
   // console.log('userSpots from CurrentSpots component', userSpots)
@@ -29,9 +31,9 @@ const MySpotsIndex = () => {
   // const filtered = objValue.filter(spot => spot.ownerId === user.id)
 
   if (!Object.values(userSpots).length) {
-    return null
+    return (<h5 className="nothing-here">Nothing here... try becoming a host!</h5>)
   } else {
-    return (Object.values(userSpots).map(spot => (
+    return isLoaded && (Object.values(userSpots).map(spot => (
       
       <div id="outer-most-my-spots">
       <div className="frame-mySpots">

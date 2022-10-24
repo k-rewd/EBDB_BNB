@@ -21,7 +21,9 @@ const MyReviewsIndex = () => {
   }, [dispatch])
 
 
-  if (!userReviewVals) return null
+  if (!userReviewVals.length) return(
+     <h5 className="nothing-here">Nothing here... try posting a review!!</h5>
+     )
   else return isLoaded &&
     (userReviewVals.map(review => (
       <div className="outer-most-review">
