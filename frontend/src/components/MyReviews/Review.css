@@ -72,8 +72,10 @@
   flex-direction: column;
   
   justify-content: space-between;
-  /* border: 1px solid red; */
+  border: 2px solid #FF385C;
   width: 400px;
+  border-radius: 14px;
+  
   margin-bottom: 40px;
 
   
