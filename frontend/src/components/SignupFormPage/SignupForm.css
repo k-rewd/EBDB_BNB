@@ -1,15 +1,16 @@
+
+
 .sign-up-outer-most {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  margin-left: 450px;
+  width: 50%;
+
 }
 
 .sign-up-form-content-area {
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 100%;
+  width: 100%;
 }
 
 .sign-up-jin-pink-buttons {
@@ -21,11 +22,14 @@
   /* background: transparent; */
 }
 
-#welcome {
+#welcome-signup {
   display: flex;
-  justify-self: center;
 }
 
 .sign-up-errors {
   color: red;
+}
+
+.error-messages {
+  width: 100%;
 }

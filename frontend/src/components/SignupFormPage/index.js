@@ -61,16 +61,9 @@ function SignupFormPage() {
   return (
     <div className="sign-up-outer-most">
       <form onSubmit={handleSubmit} >
-        <h4 id="welcome"> Welcome to the EBDB Bed & Breakfast</h4>
-        <ul className="sign-up-errors">
-          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        </ul>
-        <ul>
-          {frontErrors && validationErrors.length > 0 && validationErrors.map(error => (
-            <li className="error-messages" key={error}>{error}</li>))}
-        </ul>
-        <div className="sign-up-form-content-area">
+        <h4 id="welcome-signup"> Welcome to the EBDB Bed & Breakfast</h4>
 
+        <div className="sign-up-form-content-area">
           <input
             placeholder="First Name"
             type="text"
@@ -124,9 +117,15 @@ function SignupFormPage() {
 
           <button className="sign-up-jin-pink-buttons" type="submit">Sign Up</button>
         </div>
+        <ul className="sign-up-errors">
+          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+        </ul>
+        <ul>
+          {frontErrors && validationErrors.length > 0 && validationErrors.map(error => (
+            <li className="error-messages" key={error}>{error}</li>))}
+        </ul>
       </form>
     </div>
-
   );
 }
 
