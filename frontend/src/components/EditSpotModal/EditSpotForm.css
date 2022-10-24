@@ -25,6 +25,8 @@
 }
 
 .editspot-pink-buttons {
+  /* display: flex;
+  align-items: center; */
   width: 100%;
   background-color: #FF385C;
   color: white;
@@ -38,4 +40,9 @@
 #welcome-edit {
   display: flex;
   justify-content: center;
+}
+
+.my-spot-image {
+  width: 400px;
+  border-radius: 14px;
 }

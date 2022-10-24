@@ -41,9 +41,9 @@ const MySpotsIndex = () => {
         <NavLink to={`/spots/${spot.id}`}>
         {/* <div className="my-spots-title-row"><h1 id="my-spots-h1">{spotOwner.firstName}'s Spots</h1></div> */}
           
-              <div className="spot-card-flex-column">
+              <div >
                 <div>
-                  <img className="spot-image" src={spot.previewImage} alt='img' />
+                  <img className="my-spot-image" src={spot.previewImage} alt='img' />
                 </div>
                 <div className="cityState-avgRating-flex-row">
                   <div>

@@ -17,13 +17,27 @@
 }
 
 .profile-dropdown {
-  display: grid;
+  /* display: grid; */
   position: absolute;
-  right: 20px;
+  right: 38px;
   border: 1px solid rgb(211, 211, 211);
-  padding: 0px;
+  padding-top: 10px;
   margin: 0px;
   background-color: white;
+  width: 150px;
+  border-radius: 5px;
+  
+  
+}
+
+.profile-dropdown-username {
+  text-align: left;
+  padding-left: 6px;
+  border-bottom: 1px solid rgb(146, 146, 146)
+}
+
+.dropdown-top {
+  padding-bottom: 0px;
 }
 
 .button-style {
@@ -37,10 +51,7 @@
   background: rgb(240, 240, 240);
 }
 
-.dropdown-top {
-  padding: 10px 20px;
-  padding-bottom: 0px;
-}
+
 
 .dropdown-createspot {
   display: flex;
@@ -62,9 +73,6 @@
   margin-left: 100%
 }
 
-/* .profile-dropdown-username {
-  right: px;
-} */
 
 .icon-drop-menu {
   cursor: pointer;
