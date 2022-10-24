@@ -92,8 +92,7 @@ export const spotAdd = (spot) => async dispatch => {
   })
   if (response.ok) {
     const spot = await response.json()
-    await dispatch(addSpot(spot))
-    // console.log('hi', spot)
+    await dispatch(spotOne(spot.id))
     return spot
   }
   return null
@@ -156,8 +155,8 @@ const spotReducer = (state = initialState, action) => {
     
 
     case CREATE_SPOT:
-      newState = { ...state, singleSpot: {...state.singleSpot}, allSpots: {...state.allSpots}}
-
+      newState = { ...state }
+      newState.allSpots = {...state.allSpots}
       newState.allSpots[action.spot.id] = action.spot
       newState.singleSpot = action.spot
       return newState
