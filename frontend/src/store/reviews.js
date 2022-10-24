@@ -103,7 +103,7 @@ const reviewReducer = (state = initialState, action) => {
       return newState
 
     case GET_SPOT_REVIEWS:
-      newState = { ...state, spotReviews:{ ...state.spotReviews} }
+      newState = { ...state, spotReviews:{ ...state.spotReviews}}
       let newReviews = {}
       action.spot.Reviews.forEach(review => {
         newReviews[review.id] = review
@@ -112,7 +112,7 @@ const reviewReducer = (state = initialState, action) => {
       return newState
 
     case CREATE_REVIEW:
-      newState = { ...state }
+      newState = { ...state, userReviews:{ ...state.userReviews}, spotReviews:{ ...state.spotReviews}}
 
       newState.spotReviews[action.spot.id] = action.spot
       newState.userReviews = action.spot

@@ -35,8 +35,8 @@ const SpotIndex = () => {
                   <img className="spot-image" src={spot.previewImage} alt='img' />
                 </div>
                 <div className="cityState-avgRating-flex-row">
-                  <div>
-                    {spot.city}, {spot.state}
+                  <div className="city-state">
+                    {spot.city}, {spot.state}, {spot.country}
                   </div>
                   <div>
                   ★{spot.avgRating}

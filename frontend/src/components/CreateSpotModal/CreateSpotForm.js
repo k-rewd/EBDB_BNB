@@ -44,11 +44,11 @@ const CreateSpotForm = ({ setShowModal }) => {
     if (!address) errors.push('Invalid address')
     else if (address.length > 20) errors.push('Address: Character limit(max 20)')
     if (!city) errors.push('Invalid city')
-    else if (city.length > 20) errors.push('City: Character limit(max 20)')
+    else if (city.length > 15) errors.push('City: Character limit(max 15)')
     if (!state) errors.push('Invalid state')
-    else if (state.length < 2 || state.length > 20) errors.push('State: Character limit(2~20)')
+    else if (state.length < 2 || state.length > 15) errors.push('State: Character limit(2~15)')
     if (!country) errors.push('Invalid country')
-    else if (country.length > 20) errors.push('Country: Character limit(max 20)')
+    else if (country.length > 3) errors.push('Country: Character limit(max 3)')
     if (!name) errors.push('Name is required')
     else if (name.length > 20) errors.push('Name: Character limit(max 20)')
     // else if (name.length > 20) errors.push('Name must be 20 characters or less')
@@ -58,6 +58,7 @@ const CreateSpotForm = ({ setShowModal }) => {
     if (!price) errors.push('Price per night is required')
     else if (price > 999999) errors.push('Too expensive')
     if (!url) errors.push('Valid image url required')
+
     setValidationErrors(errors)
   }, [address, city, state, country, name, description, price, url])
 
@@ -159,7 +160,7 @@ const CreateSpotForm = ({ setShowModal }) => {
 
 
             <input
-              type='text'
+              type='url'
               placeholder='Image (URL)'
               value={url}
               onChange={updateURL} />

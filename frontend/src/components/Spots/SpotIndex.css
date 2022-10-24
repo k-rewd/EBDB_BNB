@@ -27,6 +27,7 @@
 .spot-card-flex-column {
   display: flex;
   flex-direction: column;
+  margin: 0px 30px;
 
 }
 .spot-price-night {
@@ -50,6 +51,14 @@
   
 
 } */
+.city-state {
+  display: inline-block;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  width: 250px;
+  /* height: 50px; */
+}
 
 
 .spot-image {

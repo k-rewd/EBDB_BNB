@@ -51,10 +51,12 @@
 #detail-title {
   font-size: 20px;
   border-bottom: 1px solid gray;
+  word-wrap: break-word
 }
 
 #details {
   width: 100%;
+  word-wrap: break-word;
   
   /* border: 2px solid red; */
   /* padding-left: 20px; */
@@ -102,11 +104,13 @@ text-align: right;
   padding-bottom: 10px;
   border-bottom: 1px solid gray;
   height: 80px;
-
+  word-wrap: break-word;
 }
 
 #reviews {
   width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   /* border: 2px solid red; */
 
 }

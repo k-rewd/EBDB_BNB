@@ -66,9 +66,9 @@ module.exports = {
       {
         ownerId: 3,
         address: '1600 Pennsylvania Ave',
-        city: 'Washington,',
+        city: 'Washington',
         state: 'DC',
-        country: 'Taco Bell',
+        country: 'USA',
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Taco Bell',
