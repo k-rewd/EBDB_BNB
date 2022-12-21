@@ -4,30 +4,41 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  /* border: 10px solid red; */
+  border: 1px solid red;
 }
 
 .frame {
   /* margin-top: 100px; */
-  padding: 50px 45px;
   display: flex;
+  justify-content:flex-start;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
   flex-wrap: wrap;
-  justify-content: flex-start;
+  margin: 0 75px;
+  gap: 20px;
+  /* row-gap: 25px; */
+
+  /* margin: */
+  /* justify-content: flex-start; */
   /* column-gap: 25px;
   row-gap: 25px; */
-  gap: 50px 44.7px;
+  /* gap: 50px 44.7px; */
   /* height: 100vh; */
   list-style: none;
-  justify-items: center;
-  /* border: 10px solid red; */
-  width: 85%;
+  /* justify-items: center; */
+  border: 2px solid blue;
+  /* width: 85%; */
 
 }
 
+.single-spot{
+  border: 1px solid pink;
+  width: 250px;
+}
 .spot-card-flex-column {
   display: flex;
   flex-direction: column;
-  margin: 0px 30px;
+  /* margin: 0px 30px; */
 
 }
 .spot-price-night {

@@ -28,7 +28,7 @@ const SpotIndex = () => {
       <div id="outer-most-spots">
         <div className="frame">
           {Object.values(spots).map(spot => (
-            <div key={spot.id}>
+            <div className="single-spot" key={spot.id}>
             <NavLink to={`/spots/${spot.id}`} >
               <div className="spot-card-flex-column">
                 <div>
