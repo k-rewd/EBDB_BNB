@@ -51,8 +51,8 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className='nav-frame'>
-      <div>
-        <NavLink exact to="/"><img src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
+      <div id='ebdbbnb-icon-container'>
+        <NavLink exact to="/"><img id='ebdbbnb-icon' src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
         alt="logo" style={{ margin:'0px', padding:'0px' }} /></NavLink>
       </div>
       <div>

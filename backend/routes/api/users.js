@@ -1,4 +1,4 @@
-git // backend/routes/api/users.js
+// backend/routes/api/users.js
 const express = require('express')
 const router = express.Router();
 
