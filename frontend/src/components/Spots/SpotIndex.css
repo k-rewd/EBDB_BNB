@@ -1,3 +1,31 @@
+#dev-icons {
+  margin: 0px 75px;
+  display: flex;
+  justify-content: center;
+}
+/* #dev-button-container{
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+} */
+.fa-github,
+.fa-linkedin,
+.fa-angellist,
+.fa-dev {
+  font-size: 25px;
+  margin: 25px;
+  color: gray;
+  cursor: pointer;
+}
+
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-angellist:hover,
+.fa-dev:hover {
+  color: #FF5A5F;
+  transform: rotate(15deg);
+  transition: .25s;
+}
+
 
 #outer-most-spots {
   width: 100%;
@@ -14,7 +42,7 @@
   /* display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
   flex-wrap: wrap;
-  margin: 10px 75px 0 75px;
+  margin: 0px 75px;
   gap: 35px 29px;
   padding:0px;
   /* row-gap: 25px; */
