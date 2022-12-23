@@ -32,28 +32,31 @@ background: transparent; */
   position: absolute;
   right: 78px;
   border: 1px solid lightgray;
-  
   margin-top: 10px;
   background-color: white;
-  width: 150px;
+  width: 300px;
   border-radius: 5px;
+  box-shadow: 1px 2px 5px gray;
+  
 }
 
 .profile-dropdown-username {
-  padding-left: 6px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid rgb(146, 146, 146);
-  padding: 10px 10px 5px 10px;
-
+  /* padding-left: 6px; */
+  margin: 10px 0px;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 10px 5px 14px;
+}
+#user-username {
+  color: #FF5A5F;
 }
 
 .dropdown-top {
-  padding-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .button-style {
   border: none;
-  padding: 10px;
+  padding: 15px 40px 15px 15px;
   background: transparent;
   width: 100%;
   text-align: left;
@@ -62,6 +65,8 @@ background: transparent; */
 .button-style:hover {
   cursor: pointer;
   background: rgb(240, 240, 240);
+  color: #FF5A5F;
+
 }
 
 #drop-menu-icon-style {

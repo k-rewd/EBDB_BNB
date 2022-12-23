@@ -47,7 +47,7 @@ function ProfileButton({ user }) {
       {showMenu && (
         <div className="profile-dropdown">
           <div className="dropdown-top">
-            <div className="profile-dropdown-username"> Hello, {user.firstName}</div>
+            <div className="profile-dropdown-username"> Hello, <strong id='user-username'>{user.firstName}</strong></div>
           
           <div><NavLink to="/current"><button className="button-style">Manage Listings</button></NavLink></div>
           <div><NavLink to={"/reviews/current"}><button className="button-style">Manage Reviews</button></NavLink></div>

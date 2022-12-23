@@ -30,9 +30,12 @@ const SpotIndex = () => {
         <span id="dev-button-container">
           <a href='https://github.com/k-rewd' target='_blank' rel='noreferrer'>
           <i class="fa-brands fa-github"></i></a>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-angellist"></i>
-          <i class="fa-brands fa-dev"></i>
+          <a href="https://www.linkedin.com/in/andrew-k-474479123/" target='_blank' rel='noreferrer'>
+          <i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://angel.co/u/andrew-kim-174" target='_blank' rel='noreferrer'>
+          <i class="fa-brands fa-angellist"></i></a>
+          <a href="https://k-rewd.github.io/" target='_blank' rel='noreferrer'>
+          <i class="fa-brands fa-dev"></i></a>
         </span>
 
       </div>
@@ -43,7 +46,7 @@ const SpotIndex = () => {
               <NavLink to={`/spots/${spot.id}`} >
                 <div className="spot-card-flex-column">
                   <div id='single-card-img-container'>
-                    <img onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} className="spot-image" src={spot.previewImage} alt='img' />
+                    <img onError={(e) => e.target.src= "https://cdn-icons-png.flaticon.com/512/70/70644.png"} className="spot-image" src={spot.previewImage} alt='img' />
                   </div>
                   <div className="cityState-avgRating-flex-row">
                     <div className="city-state">
