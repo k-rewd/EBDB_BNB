@@ -91,6 +91,11 @@ background: transparent; */
   margin-right: 10px;
 }
 
+.sign-up-button:hover {
+  color:#FF5A5F;
+}
+
+
 .home-button {
   margin-left: 100%
 }

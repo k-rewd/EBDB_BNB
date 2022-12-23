@@ -8,6 +8,9 @@
   cursor: pointer;
 }
 
+.log-in-not-loggedin:hover {
+  color:#FF5A5F;
+}
 
 .login-form-modal {
   display: flex;
