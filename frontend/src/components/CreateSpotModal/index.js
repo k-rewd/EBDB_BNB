@@ -8,7 +8,7 @@ function CreateSpotModal() {
 
   return (
     <>
-    <button className='createSpotModal-button' onClick={() => setShowModal(true)}>Become a Host</button>
+    <button className='createSpotModal-button' onClick={() => setShowModal(true)}>EBDBBnB your home</button>
     {showModal && (
       <Modal onClose={() => setShowModal(false)}>
         <CreateSpotForm setShowModal={setShowModal} />

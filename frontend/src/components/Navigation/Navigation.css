@@ -1,7 +1,8 @@
 .nav-frame {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
   padding: 0 75px;
   height: 75px;
 
@@ -19,37 +20,31 @@ background: transparent; */
 /* .nav-home {
   float: right;
 } */
-#ebdbbnb-icon-container {
-  display: flex;
-  align-items: center;
 
-  border: 1px solid rebeccapurple;
-}
 
 #ebdbbnb-icon {
+  display: flex;
+  align-items: center;
   height: 25px;
-  border: 1px solid red;
-  
 }
 
 .profile-dropdown {
-  /* display: grid; */
   position: absolute;
-  right: 38px;
-  border: 1px solid rgb(211, 211, 211);
-  padding-top: 10px;
-  margin: 0px;
+  right: 78px;
+  border: 1px solid lightgray;
+  
+  margin-top: 10px;
   background-color: white;
   width: 150px;
   border-radius: 5px;
-
-
 }
 
 .profile-dropdown-username {
-  text-align: left;
   padding-left: 6px;
-  border-bottom: 1px solid rgb(146, 146, 146)
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(146, 146, 146);
+  padding: 10px 10px 5px 10px;
+
 }
 
 .dropdown-top {
@@ -58,12 +53,14 @@ background: transparent; */
 
 .button-style {
   border: none;
+  padding: 10px;
   background: transparent;
   width: 100%;
   text-align: left;
 }
 
 .button-style:hover {
+  cursor: pointer;
   background: rgb(240, 240, 240);
 }
 
@@ -76,9 +73,9 @@ background: transparent; */
 .dropdown-createspot {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 30px;
-  margin-top: 30px;
-  margin-right: 30px;
+
 }
 
 .login-sign-up-row {
@@ -93,7 +90,26 @@ background: transparent; */
   margin-left: 100%
 }
 
+.fa-bars {
+  font-size: 16px;
+}
+.fa-circle-user {
+  font-size: 28px;
+  color: grey;
+}
 
 .icon-drop-menu {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  border-radius: 30px;
+  border: 1px solid lightgrey;
+  padding: 5px 5px 5px 13px;
+
+}
+.icon-drop-menu:hover {
+  transition: .30s;
+  box-shadow: 1px 2px 5px 1px lightgray;
 }

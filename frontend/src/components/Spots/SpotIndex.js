@@ -28,10 +28,10 @@ const SpotIndex = () => {
       <div id="outer-most-spots">
         <div className="frame">
           {Object.values(spots).map(spot => (
-            <div className="single-spot" key={spot.id}>
+            <div className="single-card" key={spot.id}>
             <NavLink to={`/spots/${spot.id}`} >
               <div className="spot-card-flex-column">
-                <div>
+                <div id='single-card-img-container'>
                   <img onError={(e)=> e.target.src="https://cdn-icons-png.flaticon.com/512/70/70644.png"}className="spot-image" src={spot.previewImage} alt='img' />
                 </div>
                 <div className="cityState-avgRating-flex-row">
