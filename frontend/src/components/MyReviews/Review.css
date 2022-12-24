@@ -52,6 +52,14 @@
   font-weight: bold;
   border: 1px solid gray;
 }
+.leave-review-pink-button {
+  width: 100%;
+  background-color: #FF385C;
+  /* border-radius: 0 0 5px 5px; */
+  color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+}
 
 .review-spot-name {
   margin-bottom: 0px;

@@ -1,17 +1,18 @@
 #outer-most-details {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  margin: 20px 0;
   display: flex;
   justify-content: center;
 }
 
 #spot-page {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   width: 59%;
 
 }
 
 #header {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: inline;
   width: 100%;
 }
@@ -25,21 +26,24 @@
   display: flex;
   gap: 10px;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
 #image-container {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 100%;
   height: 500px;
   text-align: center;
 }
+
 #image {
-  max-width: 100%;
+  width: 100%;
   height: 500px;
-  object-fit:cover;
+  object-fit: cover;
 }
+
 #details {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 40px;
   display: flex;
   gap: 100px
@@ -49,11 +53,13 @@
   width: 65%;
   /* margin-right: 100px; */
 }
+
 #detail-title {
   border-bottom: 1px solid lightgray;
   padding: 10px 0px;
-  
+
 }
+
 .amenities {
   display: flex;
   flex-direction: column;
@@ -61,47 +67,54 @@
   padding: 20px 0px;
 
 }
+
 .amenities-inline {
   display: flex;
   flex-direction: row;
   gap: 10px;
   padding: 10px 0px;
 }
+
 .aircover {
   padding: 20px 0px;
   border-bottom: 1px solid lightgray;
 
 }
+
 .aircover-description {
   padding: 10px 0px;
 
 }
 
-
 #details-right {
   right: 390px;
   /* top: 673px; */
-  width: 400px;
-  height: 500px;
-  border: 1px solid orange;
+  width: 375px;
+  max-height: 400px;
+  /* border: 1px solid lightgray; */
+  box-shadow: 5px 5px 20px 5px lightgray;
   border-radius: 3%;
   /* position: fixed; */
-  
+
 }
+
 #details-right-container {
   margin: 20px;
 
 }
+
 #spot-details-row {
   display: flex;
 
 }
+
 .spot-detail-price {
   width: 50%;
   display: flex;
   align-items: center;
   gap: 2px;
 }
+
 #price {
   font-size: 20px;
   font-weight: bold;
@@ -118,15 +131,17 @@
 }
 
 #reviews {
-  border: 1px solid red;
-  height: 100%;
-  /* padding: 10px 0px; */
-  overflow-y: scroll;
+  /* border: 1px solid red; */
+  max-height: 300px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  overflow-y:auto;
 
 }
+
 #spot-reviews {
   /* padding: 10px 0px; */
-  
+
   display: flex;
   flex-direction: column-reverse;
 
