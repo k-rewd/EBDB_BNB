@@ -37,7 +37,7 @@ const SpotDetailIndex = () => {
             <div id="header-details-row">
               <div>★{!spotDetail.avgStarRating ? <strong>NEW!</strong> : spotDetail.avgStarRating}</div>
               <strong>·</strong>
-              <div>{spotDetail.numReviews} review(s)</div>
+              <div>{spotDetail.numReviews === 1 ? <div>{spotDetail.numReviews} review</div> : <div>{spotDetail.numReviews} reviews</div>}</div>
               <strong>·</strong>
               <strong>{spotDetail.city}, {spotDetail.state}, {spotDetail.country}</strong>
             </div>

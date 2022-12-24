@@ -95,6 +95,7 @@
   box-shadow: 5px 5px 20px 5px lightgray;
   border-radius: 3%;
   /* position: fixed; */
+  background-color: whitesmoke;
 
 }
 
@@ -111,12 +112,12 @@
 .spot-detail-price {
   width: 50%;
   display: flex;
-  align-items: center;
-  gap: 2px;
+  align-items: baseline;
+  gap: 5px;
 }
 
 #price {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -128,14 +129,21 @@
   align-self: center;
   font-size: 14px;
   gap: 10px;
+
 }
 
 #reviews {
   /* border: 1px solid red; */
   max-height: 300px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 5px;
   overflow-y:auto;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 300px;
+  background-color: white;
+  padding: 5px;
+  
 
 }
 
