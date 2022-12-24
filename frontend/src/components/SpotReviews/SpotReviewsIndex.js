@@ -17,28 +17,28 @@ const SpotReviewIndex = () => {
 
   useEffect(() => {
     dispatch(getSpotReviewsThunk(spotId))
-    .then(() => setIsLoaded(true))
+      .then(() => setIsLoaded(true))
   }, [dispatch, spotId])
 
   // console.log('spotReview2', spotReview)
 
 
-  if(!newSpotReview) {
+  if (!newSpotReview) {
     return null
   } else {
     return isLoaded &&
       newSpotReview.map(review => (
-      <>
-      <div>
-        <ul>
-          <div>
-          <div >"{review.review}"</div>
-          <div>- {review.User.firstName} {review.User.lastName}</div>
+        <div id='one-review'>
+          <div id='spot-review-index'>
+            <div id='review-user-stars'>
+              <div>★{review.stars}</div>
+              <div id='review-name'>{review.User.firstName} {review.User.lastName}</div>
+              {/* <div>{review.updatedAt ? review.updatedAt : review.createdAt}</div> */}
+            </div>
+            <div id='review-review'>"{review.review}"</div>
           </div>
-        </ul>
-      </div>
-      </>
-    ))
+        </div>
+      ))
   }
 }
 

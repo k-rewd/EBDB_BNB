@@ -1,4 +1,17 @@
-/* .spot-review-index-review {
-  
-} */
+#one-review {
+  /* border: 1px solid pink; */
+}
 
+#spot-review-index {
+  margin: 20px 0;
+}
+#review-user-stars {
+  display: flex;
+  gap: 10px;
+}
+#review-name {
+  font-weight:600;
+}
+#review-review {
+  word-wrap: break-word;
+}
