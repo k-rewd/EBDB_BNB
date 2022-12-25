@@ -8,8 +8,8 @@ import './MySpots.css'
 
 const MySpotsIndex = () => {
   const userSpots = useSelector(state => state.spots.allSpots)
-  // const spotOwner = useSelector(state => state.session.user)
-  
+  const sessionUser = useSelector(state => state.session.user)
+
   const [isLoaded, setIsLoaded] = useState(false)
 
   // const user = useSelector((state) => state.session.user)
@@ -33,49 +33,61 @@ const MySpotsIndex = () => {
   if (!Object.values(userSpots).length) {
     return (<h5 className="nothing-here">Nothing here... try becoming a host!</h5>)
   } else {
-    return isLoaded && (Object.values(userSpots).map(spot => (
-      
+    return isLoaded && (
+
       <div id="outer-most-my-spots">
-      <div className="frame-mySpots">
-      <div key={spot.id}>
-        <NavLink to={`/spots/${spot.id}`}>
-        {/* <div className="my-spots-title-row"><h1 id="my-spots-h1">{spotOwner.firstName}'s Spots</h1></div> */}
-          
-              <div >
-                <div>
-                  <img className="my-spot-image" onError={(e)=> e.target.src="https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spot.previewImage} alt='img' />
-                </div>
-                <div className="cityState-avgRating-flex-row">
-                  <div>
-                    {spot.city}, {spot.state}
-                  </div>
-                  <div>
-                  ★{spot.avgRating}
-                  </div>
-                </div>
-                <div>
-                  {spot.name}
-                </div>
-                <div>
-                  {spot.address}
-                </div>
-                <div className="spot-price-night">
-                  <div id="spot-price">
-                    $ {spot.price}
-                  </div>
-                  <div id="spot-night"> night</div>
-                </div>
-              </div>
-        </NavLink>
-        <div id="delete-edit">
-        <button className='editspot-pink-buttons' onClick={() => { dispatch(spotRemove(spot.id)) }}>DELETE</button>
-        {/* .then(()=>dispatch(currOwnerSpots())) */}
-        <EditSpotModal spot={spot} />
+        <div id='myspots-header'>
+        <div id='user-listings'>
+          <div className='user-name'>{sessionUser.username}'s</div>
+          <div>Listings</div>
         </div>
-      </div>
-    </div>
-    </div>
-  )))
+        <div>
+          <div className="userspot-username">{sessionUser.firstName} {sessionUser.lastName}</div>
+          <div className="user-email">{sessionUser.email}</div>
+        </div>
+        </div>
+        <div className="frame-mySpots">
+          {Object.values(userSpots).map(spot => (
+            <div id='myspot-card' key={spot.id}>
+              <NavLink to={`/spots/${spot.id}`}>
+                {/* <div className="my-spots-title-row"><h1 id="my-spots-h1">{spotOwner.firstName}'s Spots</h1></div> */}
+
+                <div >
+                  <div id="myspot-img-container">
+                    <img className="spot-image" onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spot.previewImage} alt='img' />
+                  </div>
+                  <div className="cityState-avgRating-flex-row">
+                    <div>
+                      {spot.city}, {spot.state}
+                    </div>
+                    <div>
+                      ★{spot.avgRating}
+                    </div>
+                  </div>
+                  <div>
+                    {spot.name}
+                  </div>
+                  <div>
+                    {spot.address}
+                  </div>
+                  <div className="spot-price-night">
+                    <div id="spot-price">
+                      ${spot.price}
+                    </div>
+                    <div id="spot-night"> night</div>
+                  </div>
+                </div>
+              </NavLink>
+              <div id="delete-edit">
+                <button className='editspot-pink-buttons' onClick={() => { dispatch(spotRemove(spot.id)) }}>DELETE</button>
+                {/* .then(()=>dispatch(currOwnerSpots())) */}
+                <EditSpotModal spot={spot} />
+              </div>
+            </div>
+
+          ))}
+        </div>
+      </div>)
   }
 }
 

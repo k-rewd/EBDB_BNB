@@ -1,19 +1,68 @@
 #outer-most-my-spots {
-  margin-top: 50px;
-  margin-left: 50px;
-  display: flex;
-  justify-content: center;
-  /* border: 10px solid red; */
-}
-
-
-/* #my-spots-h1 {
   width: 100%;
-} */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+.frame-mySpots {
+  /* border: 1px solid red; */
+  width: 90%;
 
-/* .frame-mySpots {
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  margin: 0px 75px;
+  gap: 35px 29px;
+  padding:0px;
+  list-style: none;
+}
+#myspots-header {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+  margin: 0px 75px 20px 75px;
 
 }
-.my-spots-title-row {
 
-} */
+#user-listings {
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+
+}
+
+.user-name {
+  color: #FF5A5F;
+  font-weight: bold;
+}
+.userspot-username {
+  color: #FF5A5F;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+.user-email {
+  font-style: italic;
+  font-weight: bold;
+  color: darkgray;
+}
+
+#myspot-card {
+  /* border: 1px solid blue; */
+
+  width: 270px;
+}
+
+#myspot-img-container {
+  object-fit: cover;
+  height: 260px;
+  margin-bottom: 10px;
+}
+
+
+#delete-edit {
+  display: flex;
+  margin-top: 2px;
+}
