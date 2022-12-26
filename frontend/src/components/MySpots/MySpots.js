@@ -36,8 +36,8 @@ const MySpotsIndex = () => {
     return isLoaded && (
 
       <div id="outer-most-my-spots">
-        <div id='myspots-header'>
-        <div id='user-listings'>
+        <div className='myspots-header'>
+        <div className='user-listings'>
           <div className='user-name'>{sessionUser.username}'s</div>
           <div>Listings</div>
         </div>

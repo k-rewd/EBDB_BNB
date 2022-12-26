@@ -8,7 +8,7 @@
 }
 .frame-mySpots {
   /* border: 1px solid red; */
-  width: 90%;
+  /* width: 90%; */
 
   display: flex;
   justify-content:flex-start;
@@ -18,7 +18,7 @@
   padding:0px;
   list-style: none;
 }
-#myspots-header {
+.myspots-header {
   display: flex;
   justify-content: space-between;
   /* border: 1px solid blue; */
@@ -26,7 +26,7 @@
 
 }
 
-#user-listings {
+.user-listings {
   display: flex;
   gap: 10px;
   font-size: 30px;
