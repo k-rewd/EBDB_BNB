@@ -86,16 +86,20 @@
 
 }
 
+#spot-description {
+  margin: 20px 0;
+}
+
 #details-right {
   right: 390px;
   /* top: 673px; */
   width: 375px;
-  max-height: 400px;
+  height: fit-content;
   /* border: 1px solid lightgray; */
   box-shadow: 5px 5px 20px 5px lightgray;
   border-radius: 3%;
   /* position: fixed; */
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 
 }
 
@@ -138,10 +142,10 @@
   margin-top: 10px;
   margin-bottom: 5px;
   overflow-y:auto;
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  height: 300px;
-  background-color: white;
+  /* border: 1px solid lightgray; */
+  /* border-radius: 10px; */
+  /* height: 300px; */
+  /* background-color: white; */
   padding: 5px;
   
 

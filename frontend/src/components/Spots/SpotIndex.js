@@ -37,7 +37,6 @@ const SpotIndex = () => {
           <a href="https://k-rewd.github.io/" target='_blank' rel='noreferrer'>
           <i class="fa-brands fa-dev"></i></a>
         </span>
-
       </div>
       <div id="outer-most-spots">
         <div className="frame">

@@ -4,6 +4,9 @@
   justify-content: center;
   margin-bottom: 5px;
   box-shadow:  0 3px 5px -2px lightgray;
+  /* position:fixed;
+  width: 100%;
+  background-color: white; */
 }
 /* #dev-button-container{
   border-bottom: 1px solid gray;
@@ -35,6 +38,7 @@
   display: flex;
   justify-content: center;
   /* border: 1px solid red; */
+  margin-bottom: 50px;
 }
 
 .frame {
