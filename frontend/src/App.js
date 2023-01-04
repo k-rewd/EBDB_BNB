@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/signup">
             <SignupFormPage />
           </Route>
-          <Route exact path="/spots/:spotId"> {/*fixx~!!!*/}
+          <Route exact path="/spots/:spotId">
             <SpotDetailIndex />
           </Route>
           <Route exact path="/current">

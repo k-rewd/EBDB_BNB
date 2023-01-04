@@ -1,7 +1,9 @@
 #dev-icons {
-  margin: 0px 75px;
+  /* margin: 0px 75px; */
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
+  box-shadow:  0 3px 5px -2px lightgray;
 }
 /* #dev-button-container{
   border-bottom: 1px solid gray;
@@ -43,7 +45,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
   flex-wrap: wrap;
   margin: 0px 75px;
-  gap: 35px 29px;
+  gap: 40px 25px;
   padding:0px;
   /* row-gap: 25px; */
 
@@ -73,9 +75,9 @@
 }
 
 .spot-image {
-  border-radius: 5px;
+  border-radius: 10px;
   object-fit: cover;
-  width: 280px;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }

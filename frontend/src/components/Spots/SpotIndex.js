@@ -64,7 +64,7 @@ const SpotIndex = () => {
                   </div>
                   <div className="spot-price-night">
                     <div id="spot-price">
-                      $ {spot.price}
+                      ${spot.price}
                     </div>
                     <div id="spot-night">
                       night
