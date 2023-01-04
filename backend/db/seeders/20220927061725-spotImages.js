@@ -37,19 +37,75 @@ module.exports = {
       },
       {
         spotId: 5,
-        url: 'https://miro.medium.com/max/1200/1*N9dX91Lm4_IsKGXUNTUgYQ.jpeg',
+        url: 'https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Koriko_2.jpg',
         preview: true
       },
       {
         spotId: 6,
-        url: 'https://i.pinimg.com/originals/da/aa/66/daaa66e616bffa03b2cbc01e3e9cd612.jpg',
+        url: 'https://studioghiblimovies.com/wp-content/uploads/2014/12/tumblr_moj7k3vcok1rm893uo9_1280.jpg',
         preview: true
       },
       {
         spotId: 7,
-        url: 'https://i.ytimg.com/vi/zJg327d8ELc/maxresdefault.jpg',
+        url: 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/4/2018/08/Ghibli-Theme-Park-Concept-1024x640.jpg',
         preview: true
       },
+      {
+        spotId: 8,
+        url: 'https://static.wikia.nocookie.net/fma/images/e/e4/Eastcommand_day.png',
+        preview: true
+      },
+      {
+        spotId: 9,
+        url: 'https://static.wikia.nocookie.net/fma/images/9/94/Rockbells-house.png',
+        preview: true
+      },
+      {
+        spotId: 10,
+        url: 'https://static.wikia.nocookie.net/fma/images/1/11/Library_movie.png',
+        preview: true
+      },
+      {
+        spotId: 11,
+        url: 'https://static.wikia.nocookie.net/fma/images/d/db/Nameless-village.png',
+        preview: true
+      },
+      {
+        spotId: 12,
+        url: 'https://static.wikia.nocookie.net/mha-rp/images/8/88/Yuuei_Building.png',
+        preview: true
+      },
+      {
+        spotId: 13,
+        url: 'https://static.wikia.nocookie.net/kimetsu-no-yaiba-fanon/images/4/44/Butterfly_Mansion.png',
+        preview: true
+      },
+      {
+        spotId: 14,
+        url: 'https://outsidergaming.com/wp-content/uploads/2021/10/Demon-Slayer-The-Hinokami-Chronicles-All-Memory-Fragments-Demon-Slayer-Corps-HQ.jpg',
+        preview: true
+      },
+      {
+        spotId: 15,
+        url: 'https://ancdn.fancaps.net/13827897.jpg',
+        preview: true
+      },
+      {
+        spotId: 16,
+        url: 'https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/3/3d/Asakusa%2C_Tokyo_Anime.png',
+        preview: true
+      },
+      {
+        spotId: 17,
+        url: 'https://i.pinimg.com/564x/09/9e/14/099e1451c0cbb3dc192ac30f07d4e9a8.jpg',
+        preview: true
+      },
+      {
+        spotId: 18,
+        url: 'https://64.media.tumblr.com/2b8d5b27b3b0f9153e903523eed05048/tumblr_pjy4mlyc0Z1tzy34x_1280.jpg',
+        preview: true
+      },
+      
     ])
   },
 
