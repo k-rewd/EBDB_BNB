@@ -64,7 +64,7 @@ module.exports = {
         price: 520
       },
       {
-        ownerId: 3,
+        ownerId: 2,
         address: '1600 Pennsylvania Ave',
         city: 'Washington',
         state: 'DC',
@@ -88,7 +88,7 @@ module.exports = {
         price: 330
       },
       {
-        ownerId: 3,
+        ownerId: 4,
         address: '3400 Mission St',
         city: 'Chicago',
         state: 'IL',
@@ -100,7 +100,7 @@ module.exports = {
         price: 220
       },
       {
-        ownerId: 4,
+        ownerId: 5,
         address: '1730 Sepulveda Blvd',
         city: 'Torrance',
         state: 'CA',
@@ -112,7 +112,7 @@ module.exports = {
         price: 260
       },
       {
-        ownerId: 4,
+        ownerId: 1,
         address: '221 Sansome St',
         city: 'San Francisco',
         state: 'CA',
@@ -124,7 +124,7 @@ module.exports = {
         price: 230
       },
       {
-        ownerId: 4,
+        ownerId: 2,
         address: '527 Sutter St',
         city: 'San Francisco',
         state: 'CA',
@@ -136,7 +136,7 @@ module.exports = {
         price: 980
       },
       {
-        ownerId: 4,
+        ownerId: 3,
         address: '2650 Mason St',
         city: 'San Francisco',
         state: 'CA',
@@ -148,7 +148,7 @@ module.exports = {
         price: 220
       },
       {
-        ownerId: 3,
+        ownerId: 4,
         address: '3420 W Slauson Ave F',
         city: 'Los Angeles',
         state: 'CA',
@@ -160,7 +160,7 @@ module.exports = {
         price: 890
       },
       {
-        ownerId: 3,
+        ownerId: 5,
         address: '310 NE Weidler St',
         city: 'Portland',
         state: 'OR',
@@ -172,7 +172,7 @@ module.exports = {
         price: 888
       },
       {
-        ownerId: 3,
+        ownerId: 1,
         address: '22829 S Figueroa St',
         city: 'Carson',
         state: 'CA',
@@ -184,7 +184,7 @@ module.exports = {
         price: 999
       },
       {
-        ownerId: 3,
+        ownerId: 2,
         address: '1219 Lomita Blvd',
         city: 'Harbor City',
         state: 'CA',
@@ -208,7 +208,7 @@ module.exports = {
         price: 310
       },
       {
-        ownerId: 3,
+        ownerId: 4,
         address: '2030 NE Broadway',
         city: 'Portland',
         state: 'OR',
@@ -220,7 +220,7 @@ module.exports = {
         price: 213
       },
       {
-        ownerId: 3,
+        ownerId: 5,
         address: '30 SW Arthur St',
         city: 'Portland',
         state: 'OR',
