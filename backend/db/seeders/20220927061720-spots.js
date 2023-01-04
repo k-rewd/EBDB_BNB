@@ -36,7 +36,7 @@ module.exports = {
         lat: 39.7645358,
         lng: -124.4730327,
         name: 'GreendaleCC',
-        description: "Retreat to the deck of this sustainable getaway and gaze at the twinkling constellations under a cosy tartan blanket. AirShip 2 is an iconic, insulated aluminium pod designed by Roderick James with views of the Sound of Mull from dragonfly windows. Airship002 is comfortable, quirky and cool. It does not pretend to be a five-star hotel. The reviews tell the story.",
+        description: "Retreat to the deck of this sustainable getaway and gaze at the twinkling constellations under a cosy tartan blanket. AirShip 2 is an iconic, insulated aluminium pod designed by Roderick James with views of the Sound of Mull from dragonfly windows.",
         price: 400
       },
       {
@@ -132,7 +132,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'House Glover',
-        description: "Discount to active military families and children stay for free. I love to cook, so unless business takes me away, you are welcomed to join me for breakfast; anything from oatmeal, home fries, veggie omelets, pancakes, homemade biscuits and gravy, or my world-famous cornmeal waffles.",
+        description: "Discount to active military families. I love to cook, so unless business takes me away, you are welcome to join me for breakfast; anything from home fries, omelets, pancakes, homemade biscuits and gravy, or my world-famous waffles.",
         price: 980
       },
       {
@@ -144,7 +144,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Bolton of Winterfell',
-        description: "ROMANTIC CABIN IN THE WOODS! Very quiet forested neighborhood in Big Bear City. A true mountain retreat with high, open-beam wood ceilings, romantic wood-burning fireplace, and rustic décor. 2 QUEEN BEDS! Fully equipped kitchen, full bath, DIRECT ENTRY GARAGE with WASHER AND DRYER!",
+        description: "ROMANTIC CABIN IN THE WOODS! Very quiet forested neighborhood. A true mountain retreat with high, open-beam wood ceilings, romantic wood-burning fireplace, and rustic décor. Fully equipped kitchen, full bath, DIRECT ENTRY GARAGE with WASHER AND DRYER!",
         price: 220
       },
       {
@@ -156,7 +156,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Vivenda Vida Boa',
-        description: "After a year-long restoration project, we are thrilled to present Vivenda Vida Boa. Translating to The Good Life House in Portuguese, every inch of this property has been lovingly and thoughtfully restored to present an experience of upscale casual elegance.",
+        description: "Translating to The Good Life House in Portuguese, every inch of this property has been lovingly and thoughtfully restored to present an experience of upscale casual elegance.",
         price: 890
       },
       {
@@ -168,7 +168,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Blackfyre',
-        description: "Located on 2 acres of the gorgeous hillside, you’ll have plenty of space for sprawling out and enjoying the fresh mountain air in privacy. Get ready to take in clear night skies full of brilliant constellations from the back-patio hot tub— whether it’s a cold winter night or a fresh summer evening.",
+        description: "Located on 2 acres of the gorgeous hillside, you’ll have plenty of space for sprawling out and enjoying the fresh mountain air in privacy. Get ready to take in clear night skies full of brilliant constellations from the back-patio hot tub.",
         price: 888
       },
       {
@@ -216,7 +216,7 @@ module.exports = {
         lat: 39.7644444,
         lng: -124.4222327,
         name: 'Ambrose',
-        description: "Time for adventures beyond your beach house? You have plenty of choices. From deep sea fishing, kayaking and parasailing over the water, to shopping, golfing, and nights on the town, there’s something for everyone in your group in vibrant Orange Beach. Name your favorite vacation activity, and you’ll likely find it here!",
+        description: "Time for adventures beyond your beach house? From deep sea fishing, and parasailing over the water, to golfing, and nights on the town, there’s something for everyone in your group. Name your favorite vacation activity, and you’ll likely find it here!",
         price: 213
       },
       {
