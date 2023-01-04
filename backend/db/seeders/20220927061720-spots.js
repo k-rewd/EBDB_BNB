@@ -100,7 +100,7 @@ module.exports = {
         price: 220
       },
       {
-        ownerId: 5,
+        ownerId: 4,
         address: '1730 Sepulveda Blvd',
         city: 'Torrance',
         state: 'CA',
@@ -160,7 +160,7 @@ module.exports = {
         price: 890
       },
       {
-        ownerId: 5,
+        ownerId: 4,
         address: '310 NE Weidler St',
         city: 'Portland',
         state: 'OR',
@@ -220,7 +220,7 @@ module.exports = {
         price: 213
       },
       {
-        ownerId: 5,
+        ownerId: 4,
         address: '30 SW Arthur St',
         city: 'Portland',
         state: 'OR',
