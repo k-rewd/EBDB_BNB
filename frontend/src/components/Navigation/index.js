@@ -102,7 +102,7 @@ function Navigation({ isLoaded }) {
         alt="logo" style={{ margin:'0px', padding:'0px' }} /></NavLink>
       </div>
       <div>
-        <form>
+        <form >
           <label>
             <input className='search-bar'
             placeholder='search...'
@@ -112,17 +112,17 @@ function Navigation({ isLoaded }) {
           </label>
         </form>
         {searchContainer ? 
-        <div className='search-container'>
+        <div className='search-results'>
           {query && searchContainer &&
-          <div>
+          <div >
             {searchBox.length > 0 ? <div className='search-name'>{searchBox.map((data)=> (
-              <NavLink to={`spots/${data.id}`} className='one-search'>
+              <NavLink key={data.id} to={`spots/${data.id}`} className='one-search'>
                 <div>{data.name}</div>
-                <div>{data.city}</div>
-                <div>{data.state}</div></NavLink>
+                <div className='search-city-state'>{data.city}, {data.state}</div>
+                </NavLink>
               ))}
               </div>:
-              <div>nonono</div>
+              <div>No results found!</div>
               }
         </div>
         }

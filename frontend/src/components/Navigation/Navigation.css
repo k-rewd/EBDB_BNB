@@ -127,3 +127,57 @@ background: transparent; */
   transition: .30s;
   box-shadow: 1px 2px 5px 1px lightgray;
 }
+
+.search-bar {
+  border:none;
+  /* background-color: whitesmoke; */
+  border: 1px solid lightgray;
+  box-shadow: 1px 1px 10px 2px lightgray;
+  border-radius: 25px;
+  height:40px;
+  margin-left:5px;
+  padding:5px;
+  padding-left:8px;
+  width: 300px;
+}
+/* .search-in {
+  border: 1px solid red;
+} */
+
+.search-results {
+  position:absolute;
+  display:flex;
+  flex-direction: column;
+  top:65px;
+  left: 765px;
+  width:25%;
+  z-index: 5;
+  border: 1px solid lightgray;
+  background-color: #FFFFFF ;
+  
+
+}
+
+.search-name {
+  display:flex;
+  flex-direction: column;
+  background-color: #FFFFFF ;
+  /* border: 1px solid blue; */
+}
+
+
+.one-search {
+  padding: 20px 10px 20px 10px;
+  background-color: #FFFFFF ;
+  font-size: 15px;
+  /* border: 1px solid red; */
+}
+
+.one-search:hover {
+  background-color: whitesmoke;
+}
+
+.search-city-state {
+  font-style: italic;
+  font-weight: 600;
+}
