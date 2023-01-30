@@ -243,10 +243,17 @@ router.get(`/search/:query`, async (req, res) => {
   // res.json(search(Spot).splice(0,10))
   const findSpot = await Spot.findAll({where: 
     {[Op.or]: [
-      {name: {[Op.like]: `%${query}%`}},
-      {city: {[Op.like]: `%${query}%`}},
-      {state:{[Op.like]: `%${query}%`}},
-      {country:{[Op.like]: `%${query}%`}}
+  // for local
+      // {name: {[Op.like]: `%${query}%`}},
+      // {city: {[Op.like]: `%${query}%`}},
+      // {state:{[Op.like]: `%${query}%`}},
+      // {country:{[Op.like]: `%${query}%`}}
+
+  // for heroku
+      {name: {[Op.iLike]: `%${query}%`}},
+      {city: {[Op.iLike]: `%${query}%`}},
+      {state:{[Op.iLike]: `%${query}%`}},
+      {country:{[Op.iLike]: `%${query}%`}}
   ]}})
   console.log('working------------------?', findSpot)
   res.status(201).json(findSpot)
