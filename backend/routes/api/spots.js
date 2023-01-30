@@ -228,6 +228,33 @@ router.get('/:spotId/reviews', async (req, res) => {
   res.status(200).json({ Reviews: reviews })
 })
 
+// Search Route
+router.get(`/search/:query`, async (req, res) => {
+  const { query } = req.params;
+  // console.log('query', query)
+
+  // const keys = ['name', 'last_name', 'email'];
+
+  // const search = (data) => {
+  //   return data.filter((item) =>
+  //     keys.some((key) => item[key].toLowerCase().includes(query)))
+  // }
+
+  // res.json(search(Spot).splice(0,10))
+  const findSpot = await Spot.findAll({where: 
+    {[Op.or]: [
+      {name: {[Op.like]: `%${query}%`}},
+      {city: {[Op.like]: `%${query}%`}},
+      {state:{[Op.like]: `%${query}%`}},
+      {country:{[Op.like]: `%${query}%`}}
+  ]}})
+  console.log('working------------------?', findSpot)
+  res.status(201).json(findSpot)
+})
+
+
+
+
 // Get all Spots owned by the Current User
 router.get('/current', requireAuth, async (req, res) => {
   const spots = await Spot.findAll({

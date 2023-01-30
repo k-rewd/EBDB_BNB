@@ -96,7 +96,7 @@ module.exports = {
         preview: true
       },
       {
-        spotId: 17,
+        spotId: 18,
         url: 'https://i.pinimg.com/564x/09/9e/14/099e1451c0cbb3dc192ac30f07d4e9a8.jpg',
         preview: true
       },
