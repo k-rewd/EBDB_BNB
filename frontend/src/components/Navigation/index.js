@@ -97,14 +97,14 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className='nav-frame'>
-      <div id='ebdb-container'>
+      <div style={sessionUser ? {width:'280px'} : {width:'166px'}}>
         <NavLink exact to="/"><img id='ebdbbnb-icon' src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
         alt="logo" style={{ margin:'0px', padding:'0px' }} /></NavLink>
       </div>
-      <div>
+      <div id='search-bar'>
         <form >
           <label>
-            <input className='search-bar'
+            <input className='search-bar-input'
             placeholder='search...'
             type='search'
             value={query}
