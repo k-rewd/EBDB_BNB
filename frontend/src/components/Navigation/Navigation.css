@@ -23,7 +23,10 @@ background: transparent; */
 /* .nav-home {
   float: right;
 } */
-
+#ebdb-container {
+  /* border: 1px solid red; */
+  width: 166px;
+}
 
 #ebdbbnb-icon {
   display: flex;
@@ -138,7 +141,7 @@ background: transparent; */
   margin-left:5px;
   padding:5px;
   padding-left:8px;
-  width: 300px;
+  width: 400px;
 }
 /* .search-in {
   border: 1px solid red;
@@ -149,7 +152,7 @@ background: transparent; */
   display:flex;
   flex-direction: column;
   top:65px;
-  left: 765px;
+  /* left: 765px; */
   width:25%;
   z-index: 5;
   border: 1px solid lightgray;

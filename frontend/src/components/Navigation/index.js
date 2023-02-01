@@ -97,7 +97,7 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className='nav-frame'>
-      <div>
+      <div id='ebdb-container'>
         <NavLink exact to="/"><img id='ebdbbnb-icon' src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
         alt="logo" style={{ margin:'0px', padding:'0px' }} /></NavLink>
       </div>
@@ -116,7 +116,7 @@ function Navigation({ isLoaded }) {
           {query && searchContainer &&
           <div >
             {searchBox.length > 0 ? <div className='search-name'>{searchBox.map((data)=> (
-              <NavLink key={data.id} to={`spots/${data.id}`} className='one-search'>
+              <NavLink key={data.id} to={`/spots/${data.id}`} className='one-search'>
                 <div>{data.name}</div>
                 <div className='search-city-state'>{data.city}, {data.state}</div>
                 </NavLink>
