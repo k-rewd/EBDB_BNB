@@ -1,12 +1,40 @@
-
-
 .sign-up-outer-most {
-  margin-left: 450px;
-  width: 50%;
+  /* margin-left: 450px; */
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
 
 }
 
+.ebdbbnb-img {
+  height: 450px;
+}
+
 .sign-up-form-content-area {
+  border: 1px solid blue;
+  margin: 100px;
+  /* display: flex; */
+  
+  /* width: 50%; */
+}
+ .sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+ }
+ 
+ .sign-up-jin-pink-buttons {
+  /* width: 100%; */
+  padding: 15px 25px 15px 25px;
+  background-color: #FF385C;
+  color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+  /* background: transparent; */
+}
+/* .sign-up-form-content-area {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -19,7 +47,7 @@
   color: white;
   font-weight: bold;
   border: 1px solid gray;
-  /* background: transparent; */
+  background: transparent;
 }
 
 #welcome-signup {
@@ -32,4 +60,4 @@
 
 .error-messages {
   width: 100%;
-}
+}  */

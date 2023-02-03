@@ -108,49 +108,43 @@ const CreateSpotForm = ({ setShowModal }) => {
           <h2 id="welcome-spot">Create a Listing</h2>
 
           <div className="createspot-content-area">
-            <input
+            <input className='create-spot-input'
               type='text'
               placeholder='Address'
               value={address}
               onChange={updateAddress} />
 
-
-            <input
+            <input className='create-spot-input'
               type='text'
               placeholder='City'
               value={city}
               onChange={updateCity} />
 
-
-            <input
+            <input className='create-spot-input'
               type='text'
               placeholder='State'
               value={state}
               onChange={updateState} />
 
-
-            <input
+            <input className='create-spot-input'
               type='text'
               placeholder='Country'
               value={country}
               onChange={updateCountry} />
 
-
-            <input
+            <input className='create-spot-input'
               type='text'
               placeholder='Name'
               value={name}
               onChange={updateName} />
 
-
-            <input
+            <input className='create-spot-input'
               type='text'
               placeholder='Description'
               value={description}
               onChange={updateDescription} />
 
-
-            <input
+            <input className='create-spot-input'
               type='number'
               placeholder='Price'
               value={price}
@@ -158,15 +152,12 @@ const CreateSpotForm = ({ setShowModal }) => {
               max='999999'
               onChange={updatePrice} />
 
-
-            <input
+            <input className='create-spot-input'
               type='url'
               placeholder='Image (URL)'
               value={url}
               onChange={updateURL} />
 
-
-            <button className="createspot-pink-buttons" type="submit">Create New Spot</button>
             {/* <button type="button" onClick={handleCancelClick}>Cancel</button> */}
           </div>
           <div className="create-errors">
@@ -174,6 +165,9 @@ const CreateSpotForm = ({ setShowModal }) => {
               {errors && validationErrors.length > 0 && validationErrors.map(error => (
                 <li className="error-messages" key={error}>{error}</li>))}
             </ul>
+          </div>
+          <div id='createspot-button-container'>
+            <button className="createspot-pink-buttons" type="submit">Create New Spot</button>
           </div>
         </form>
       </div>

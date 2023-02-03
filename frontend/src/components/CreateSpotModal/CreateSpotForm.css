@@ -3,13 +3,10 @@
   flex-direction: column;
   align-items: center;
   width: 500px;
-  height: 600px;
+  height: 605px;
   gap: 20px;
-  margin-top: 25px;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-bottom: 0px;
-  border-radius: 14px;
+  margin: 25px 50px;
+  /* border: 1px solid red; */
   background: transparent;
 }
 
@@ -30,27 +27,56 @@
 
 .createspot-outer-most {
   width: 100%;
+  /* height: 100%; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
 }
 
 .createspot-content-area {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  height: 100%;
+  align-items: center;
+  align-content: space-between;
+  /* height: 100%; */
+  gap: 8px;
+  /* border: 1px solid blue; */
+  margin-top: 10px;
 }
 
-.createspot-pink-buttons {
+.create-spot-input {
+  /* border: 1px solid red; */
   width: 100%;
-  background-color: #FF385C;
-  color: white;
-  font-weight: bold;
-  border: 1px solid gray;
+  height: 30px;
 }
+
 
 .create-errors {
   color: red;
+  /* border: 1px solid blue; */
+  height: 175px;
+  margin-top: 10px;
 }
 #welcome-spot {
   display: flex;
   justify-content: center;
+}
+#createspot-button-container {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+}
+.createspot-pink-buttons {
+  width: 50%;
+  background-color: #FF385C;
+  color: white;
+  font-weight: bold;
+  border: 1px solid gray;
+  margin-top: 10px;
+  height: 40px;
+  
+}
+
+.createspot-pink-buttons:hover {
+  cursor: pointer;
 }
