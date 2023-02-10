@@ -38,9 +38,9 @@ function Navigation({ isLoaded }) {
     if (query) {
       const getData = async () => {
         const result = await dispatch(searchThunk(query))
-        console.log('is it working RESULT', result)
+        // console.log('is it working RESULT', result)
         if (result) {
-        console.log('is it working RESULT', result)
+        // console.log('is it working RESULT', result)
 
           setSearchBox(result)
           
