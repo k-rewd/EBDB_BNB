@@ -51,6 +51,7 @@ router.put('/:bookingId', requireAuth, async(req, res) => {
   res.status(200).json(editBooking)
 });
 
+// Delete booking
 router.delete('/:bookingId', requireAuth, async(req, res) => {
   const booking = await Booking.findByPk(req.params.bookingId, {
     where: {
