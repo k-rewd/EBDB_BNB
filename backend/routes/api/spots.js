@@ -197,7 +197,7 @@ router.get('/:spotId/bookings', requireAuth, async (req, res) => {
     where: {
       spotId: spot.id,
     },
-    attributes: ['spotId', 'startDate', 'endDate']
+    attributes: ['id', 'spotId', 'startDate', 'endDate']
   })
   if (req.user.id === spot.dataValues.ownerId) {
     return res.status(200).json({ 'Bookings': ifOwner })

@@ -5,9 +5,12 @@ import { spotOne } from "../../store/spots"
 import SpotReviewIndex from "../SpotReviews/SpotReviewsIndex"
 import ReviewFormModal from "../ReviewForm"
 import './SpotDetails.css'
+import { getSpotBookingsThunk } from "../../store/bookings"
 
 const SpotDetailIndex = () => {
   const spotDetail = useSelector(state => state.spots.singleSpot)
+  const spotBookings = useSelector(state => state)
+  console.log('spotBookings', spotBookings)
   // const spot = spotDetail.SpotImages
   // console.log('spotDetailIndexSpot', spot)
 
@@ -19,8 +22,9 @@ const SpotDetailIndex = () => {
 
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(spotOne(spotId))
+  useEffect(async () => {
+    await dispatch(spotOne(spotId))
+    await dispatch(getSpotBookingsThunk(spotId))
       .then(() => setIsLoaded(true))
   }, [dispatch, spotId])
 

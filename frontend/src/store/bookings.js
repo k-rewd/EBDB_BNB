@@ -57,7 +57,8 @@ export const getUserBookingsThunk = () => async dispatch => {
 
 // Get all Bookings for a Spot based on the Spot's id /spots/:spotId/bookings
 export const getSpotBookingsThunk = (payload) => async dispatch => {
-  const response = await fetch(`/spots/${payload}/bookings`);
+  const response = await fetch(`/api/spots/${payload}/bookings`);
+  console.log('response from bookings thunk', response)
   if(response.ok) {
     const spotBookings = await response.json();
     await dispatch(actionGetSpotBookings(spotBookings))
@@ -68,10 +69,11 @@ export const getSpotBookingsThunk = (payload) => async dispatch => {
 
 // Create a Booking from a Spot based on the Spot's id /spots/:spotId/bookings
 export const newBookingThunk = (payload) => async dispatch => {
-  const response = await fetch(`/spots/${payload}/bookings`, {
+  const {id, booking} = [payload]
+  const response = await fetch(`/api/spots/${id}/bookings`, {
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(booking)
   })
   if (response.ok) {
     const newBooking = await response.json();
@@ -107,24 +109,27 @@ export const deleteBookingThunk = (id) => async dispatch => {
   return;
 }
 
-const initialState = {}
+const initialState = {
+  // userBookings: {},
+  // spotBookings: {}
+}
 
 export const bookingReducer = (state = initialState, action) => {
   let newState = {...state}
   switch (action.type) {
     case GET_USER_BOOKINGS:
       newState = {}
-      action.payload.bookings.forEach(booking => {
+      action.payload.Bookings.forEach(booking => {
         newState[booking.id] = { ...newState[booking.id], ...booking}
       })
       return newState
-
-
+      
     case GET_SPOT_BOOKINGS:
       newState = {}
-      action.payload.bookings.forEach(booking => {
+      action.payload.Bookings.forEach(booking => {
         newState[booking.id] = { ...newState[booking.id], ...booking}
       });
+      console.log('newState from reducer', newState)
       return newState
 
     case NEW_BOOKING:
