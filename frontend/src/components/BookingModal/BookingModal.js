@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import { newBookingThunk } from '../../store/bookings';
 
 
-const BookingForm = () => {
+const BookingForm = ({ spot }) => {
   const dispatch = useDispatch()
   // const { spotId } = useParams()
 
@@ -35,13 +35,13 @@ const BookingForm = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <DatePicker
-        // selected={startDate}
+        selected={startDate}
         onChange={(date) => setStartDate(date)}
         />
       </div>
       <div>
         <DatePicker
-        // selected={endDate}
+        selected={endDate}
         onChange={(date) => setEndDate(date)}
         />
       </div>
