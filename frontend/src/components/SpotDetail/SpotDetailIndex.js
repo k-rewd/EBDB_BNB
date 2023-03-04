@@ -49,6 +49,16 @@ const SpotDetailIndex = () => {
           </div>
           <div id='image-container'>
             <img id="image" onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} alt='img' />
+            <div id='image-bcde'>
+            <div id='image-bc'>
+              <div id='image-b'>b</div>
+              <div id='image-c'>c</div>
+            </div>
+            <div id='image-de'>
+              <div id='image-d'>d</div>
+              <div id='image-e'>e</div>
+            </div>
+            </div>
           </div>
           <div id="details">
             <div id='details-left'>
@@ -97,8 +107,8 @@ const SpotDetailIndex = () => {
 
                   <div id='spot-reviews'><SpotReviewIndex /></div>
                 </div>
-                  <div><ReviewFormModal /></div>
-                  <div><BookingForm spot={spotDetail}/></div>
+                <div><ReviewFormModal /></div>
+                <div><BookingForm spot={spotDetail} /></div>
               </div>
             </div>
 
