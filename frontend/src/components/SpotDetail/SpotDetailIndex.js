@@ -50,14 +50,15 @@ const SpotDetailIndex = () => {
           <div id='image-container'>
             <img id="image" onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} alt='img' />
             <div id='image-bcde'>
-            <div id='image-bc'>
-              <div id='image-b'>b</div>
-              <div id='image-c'>c</div>
-            </div>
-            <div id='image-de'>
-              <div id='image-d'>d</div>
-              <div id='image-e'>e</div>
-            </div>
+              <div id='image-bc'>
+                <img id='image-b' onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} />
+                <img id='image-c' onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} />
+
+              </div>
+              <div id='image-de'>
+                <img id='image-d' onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} />
+                <img id='image-e' onError={(e) => e.target.src = "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={spotDetail.SpotImages[0].url} />
+              </div>
             </div>
           </div>
           <div id="details">

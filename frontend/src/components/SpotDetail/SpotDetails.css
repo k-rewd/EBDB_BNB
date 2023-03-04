@@ -64,11 +64,11 @@
 
 }
  #image-b {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 50%;
  }
  #image-c {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 50%;
   border-radius: 0px 15px 0px 0px;
  }
@@ -81,11 +81,11 @@
 
 }
 #image-d {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 50%;
 }
 #image-e {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 50%;
   border-radius: 0px 0px 15px 0px;
 
