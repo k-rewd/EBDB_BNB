@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { newBookingThunk } from '../../store/bookings';
+import './BookingModal.css'
+import "react-datepicker/dist/react-datepicker.css";
 
 
 const BookingForm = ({ spot }) => {
@@ -32,9 +34,10 @@ const BookingForm = ({ spot }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form onSubmit={handleSubmit} id='booking-modal'>
+      <div className='whatdisdo'>
         <DatePicker
+        className='calendar'
         selected={startDate}
         onChange={(date) => setStartDate(date)}
         />
