@@ -91,6 +91,8 @@ const SpotDetailIndex = () => {
                 <p className="aircover-description">Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
               </div>
               <div id="spot-description">{spotDetail.description}</div>
+              <div><ReviewFormModal /></div>
+              <div id='spot-reviews'><SpotReviewIndex /></div>
             </div>
 
             <div id='details-right'>
@@ -106,9 +108,7 @@ const SpotDetailIndex = () => {
                 </div>
                 <div id="reviews">
 
-                  <div id='spot-reviews'><SpotReviewIndex /></div>
                 </div>
-                <div><ReviewFormModal /></div>
                 <div><BookingForm spot={spotDetail} /></div>
               </div>
             </div>

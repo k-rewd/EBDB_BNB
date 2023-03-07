@@ -2,14 +2,62 @@
   display: flex;
 }
 
-.whatdisdo {
+.booking-checkin {
 
-
-  /* border: 1px solid red; */
+  padding: 0px 10px 10px 10px;
+  border: 1px solid darkgray;
+  border-radius: 8px 0px 0px 8px;
 
 }
-.calendar {
 
-  /* border: 1px solid red; */
+.booking-checkout {
 
+  padding: 0px 10px 10px 10px;
+  border: 1px solid darkgray;
+  border-left: none;
+  border-radius: 0px 8px 8px 0px;
+
+}
+.datePicker {
+  width: 100px;
+  border: none;
+
+}
+
+.check-in-out {
+  font-size: 10px;
+  padding: 5px;
+}
+
+#booking-reserve {
+  border-radius: 8px;
+  background-color: #FF385C;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  margin: 15px 0px;
+}
+#booking-nocharge {
+  text-align: center;
+  font-size: 14px;
+
+}
+
+.booking-charges {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.booking-fees {
+  text-decoration: underline;
+}
+#booking-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid darkgray;
+  padding: 20px 0px;
+  font-weight: 600;
 }
