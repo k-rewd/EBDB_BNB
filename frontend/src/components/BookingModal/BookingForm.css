@@ -1,4 +1,4 @@
-#booking-modal {
+#booking-dates {
   display: flex;
 }
 
@@ -30,6 +30,7 @@
 }
 
 #booking-reserve {
+  border: none;
   border-radius: 8px;
   background-color: #FF385C;
   color: white;
@@ -38,6 +39,7 @@
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   margin: 15px 0px;
+  width: 100%;
 }
 #booking-nocharge {
   text-align: center;
@@ -60,4 +62,9 @@
   border-top: 1px solid darkgray;
   padding: 20px 0px;
   font-weight: 600;
+}
+
+#booking-conf-modal {
+  height: 300px;
+  width: 300px;
 }

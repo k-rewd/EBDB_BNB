@@ -1,22 +1,25 @@
 import DatePicker from 'react-datepicker'
 
 import React, { useEffect, useState } from "react";
+import { Modal } from '../../context/Modal';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { newBookingThunk } from '../../store/bookings';
-import './BookingModal.css'
+import './BookingForm.css'
 import "react-datepicker/dist/react-datepicker.css";
 
 
 const BookingForm = ({ spot }) => {
   const dispatch = useDispatch()
   // const { spotId } = useParams()
+  const sessionUser = useSelector(state => state.session.user)
   const spotPrice = useSelector(state => state.spots.singleSpot.price)
 
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
-  const [showBookingModal, setShowBookingModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+
 
 
 
@@ -29,43 +32,73 @@ const BookingForm = ({ spot }) => {
     e.preventDefault()
 
     const payload = {
-      id: spot.id,
-      booking: { startDate, endDate }
+      spotId: spot.id,
+      userId: sessionUser.id,
+      startDate,
+      endDate
+
+      // spotId: spot.id,
+      // userId: req.user.id,
+      // startDate: startDate,
+      // endDate: endDate
     }
+    console.log('booking payload',payload)
     const data = await dispatch(newBookingThunk(payload))
     if (data) {
       console.log('works!')
-      setShowBookingModal(false)
+      setShowModal(false)
     } else {
-      setShowBookingModal(true)
+      setShowModal(true)
     }
   }
 
   return (
     <div>
-      <form onSubmit={handleSubmit} id='booking-modal'>
-
-        <div className='booking-checkin'>
-          <label className='check-in-out'>CHECK-IN</label>
-          <DatePicker
-            className='datePicker'
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-          />
-        </div>
-        <div className='booking-checkout'>
-          <label className='check-in-out'>CHECKOUT</label>
-          <DatePicker
-            className='datePicker'
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-          />
-        </div>
-        <div>
-          <button id='booking-reserve' type='submit'>Reserve</button>
+      <div >
+        <div id='booking-dates'>
+          <div className='booking-checkin'>
+            <label className='check-in-out'>CHECK-IN</label>
+            <DatePicker
+              className='datePicker'
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+            />
+          </div>
+          <div className='booking-checkout'>
+            <label className='check-in-out'>CHECKOUT</label>
+            <DatePicker
+              className='datePicker'
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+            />
+          </div>
         </div>
 
-      </form>
+        <button id='booking-reserve' onClick={() => setShowModal(true)}>Reserve</button>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)} id='booking-conf-modal'>
+            <div id='booking-conf-modal'>
+              <div className='booking-fees'>${spotPrice} x {numDays(startDate, endDate)} nights</div>
+              <div>${numDays(startDate, endDate) * spotPrice}</div>
+            </div>
+            <div>{startDate.getUTCFullYear()}</div>
+            <div>{startDate.getDay()}</div>
+            <div>{startDate.toISOString().slice(0, 10)}</div>
+
+
+
+
+            <form onSubmit={handleSubmit}>
+            <button type='submit'>submit</button>
+            </form>
+          </Modal>
+        )}
+
+      </div>
+
+
+
+
       {/* <div>{console.log(startDate.getTime())}hello{startDate.getDate()}</div> */}
       <div id='booking-nocharge'>You won't be charged yet</div>
       <div className='booking-charges'>
