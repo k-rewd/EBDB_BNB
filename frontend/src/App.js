@@ -9,6 +9,7 @@ import SpotIndex from "./components/Spots/SpotIndex";
 import SpotDetailIndex from "./components/SpotDetail/SpotDetailIndex";
 import MySpotsIndex from "./components/MySpots/MySpots";
 import MyReviewsIndex from "./components/MyReviews/MyReviewsIndex";
+import MyBookingsIndex from "./components/MyBookings/MyBookings";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path="/reviews/current">
             <MyReviewsIndex />
+          </Route>
+          <Route exact path="/bookings/current">
+            <MyBookingsIndex />
           </Route>
         </Switch>
       )}
