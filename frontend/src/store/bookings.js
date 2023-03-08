@@ -72,7 +72,7 @@ export const newBookingThunk = (payload) => async dispatch => {
   // const {id, booking} = [payload]
   // console.log('id', id)
   console.log('payload', payload)
-  const response = await fetch(`/api/spots/${payload.spotId}/bookings`, {
+  const response = await csrfFetch(`/api/spots/${payload.spotId}/bookings`, {
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify(payload)
