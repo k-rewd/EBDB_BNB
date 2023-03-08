@@ -69,17 +69,12 @@ export const getSpotBookingsThunk = (payload) => async dispatch => {
 
 // Create a Booking from a Spot based on the Spot's id /spots/:spotId/bookings
 export const newBookingThunk = (payload) => async dispatch => {
-  // const {id, booking} = [payload]
-  // console.log('id', id)
-  console.log('payload', payload)
   const response = await csrfFetch(`/api/spots/${payload.spotId}/bookings`, {
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify(payload)
   })
-  console.log('response', response)
   if (response.ok) {
-    console.log('response')
     const newBooking = await response.json();
     await dispatch(actionNewBooking(newBooking))
     return newBooking

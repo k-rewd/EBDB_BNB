@@ -1,4 +1,4 @@
-#booking-dates {
+.booking-dates {
   display: flex;
 }
 
@@ -18,6 +18,7 @@
   border-radius: 0px 8px 8px 0px;
 
 }
+
 .datePicker {
   width: 100px;
   border: none;
@@ -41,6 +42,7 @@
   margin: 15px 0px;
   width: 100%;
 }
+
 #booking-nocharge {
   text-align: center;
   font-size: 14px;
@@ -56,7 +58,8 @@
 .booking-fees {
   text-decoration: underline;
 }
-#booking-total {
+
+#total-before {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid darkgray;
@@ -64,7 +67,63 @@
   font-weight: 600;
 }
 
+/**CONFIRMATION MODAL **/
+
 #booking-conf-modal {
-  height: 300px;
-  width: 300px;
+  height: fit-content;
+  width: 400px;
+  padding: 20px;
+}
+
+#bcm-spot-details {
+  margin: 20px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#bcm-dates-container{
+  /* border: 1px solid green; */
+  height: 100px;
+}
+#bcm-dates {
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.bcm-booking-dates {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.change-confirm {
+  border: none;
+  background: none;
+  color: #FF385C;
+  font-weight: 600;
+}
+
+.bcm-booking-charges {
+  display: flex;
+  justify-content: space-between;
+}
+#bcm-booking-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid darkgray;
+  padding: 20px 0px;
+  font-weight: 600;
+}
+
+#bcm-bookspot {
+  border: none;
+  border-radius: 8px;
+  background-color: #FF385C;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  /* margin: 15px 0px; */
+  width: 100%;
 }
