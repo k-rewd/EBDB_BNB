@@ -28,7 +28,7 @@ const EditBookingForm = ({ setShowModal, bookings }) => {
     e.preventDefault()
 
     const payload = {
-      spotId: bookings.spotId,
+      id: bookings.id,
       userId: sessionUser.id,
       startDate,
       endDate

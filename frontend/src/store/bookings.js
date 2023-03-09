@@ -84,7 +84,8 @@ export const newBookingThunk = (payload) => async dispatch => {
 
 // Update and return an existing booking. /api/bookings/:bookingId
 export const updateBookingThunk = (payload) => async dispatch => {
-  const response = await fetch(`/api/bookings/${payload.id}`, {
+  console.log('payload', payload)
+  const response = await csrfFetch(`/api/bookings/${payload.id}`, {
     method: 'PUT',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify(payload)
