@@ -1,3 +1,98 @@
-#id {
-  border: 1px solid red;
+#mb-outer {
+  /* border: 1px solid red; */
+}
+
+#mb-main {
+  /* border: 1px solid blue; */
+  margin: 10px;
+}
+
+#mb-frame {
+  /* border: 1px solid yellow; */
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  height: 300px;
+}
+
+#mb-card {
+  /* border: 1px solid pink; */
+  border-radius: 10px;
+  width: 270px;
+  height: 280px;
+  box-shadow: 2px 2px 5px 2px lightgray;
+}
+
+#mb-card:hover {
+  box-shadow: 5px 5px 20px 5px lightgray;
+}
+
+#mb-img-container {
+  object-fit: cover;
+  height: 260px;
+  
+}
+
+#mb-card-img {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+#mb-info {
+  position: relative;
+  bottom: 85px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.425));
+  padding: 0 5px;
+  /* border-radius: 0 0 10px 10px; */
+  color: white;
+
+
+}
+
+#mb-name-place {
+  display: flex;
+  justify-content: space-between;
+}
+
+#mb-spot-name {
+  /* color: white; */
+
+}
+
+#mb-city-country {
+  font-size: 10px;
+  
+}
+
+#mb-dates {
+  /* color: white; */
+  font-size: 12px;
+
+}
+
+#mb-confNum {
+  display: flex;
+  align-items: baseline;
+  margin-top: 15px;
+  gap: 5px;
+}
+
+#bookingNum {
+  font-size: 10px;
+
+}
+
+#mb-edit-del {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: #FF385C;
+  font-weight: bold;
+  
 }
