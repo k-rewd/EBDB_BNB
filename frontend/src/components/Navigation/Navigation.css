@@ -129,7 +129,10 @@ background: transparent; */
 .icon-drop-menu:hover {
   transition: .30s;
   box-shadow: 1px 2px 5px 1px lightgray;
+  color:#FF5A5F;
+
 }
+
 
 #search-bar {
   position: center;

@@ -1,6 +1,6 @@
 import DatePicker from 'react-datepicker'
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Modal } from '../../context/Modal';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
@@ -32,22 +32,14 @@ const BookingForm = ({ spot }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     const payload = {
       spotId: spot.id,
       userId: sessionUser.id,
       startDate,
       endDate
-
-      // spotId: spot.id,
-      // userId: req.user.id,
-      // startDate: startDate,
-      // endDate: endDate
     }
-    console.log('booking payload', payload)
     const data = await dispatch(newBookingThunk(payload))
     if (data) {
-      console.log('works!')
       setShowModal(false)
     } else {
       setShowModal(true)
@@ -90,36 +82,34 @@ const BookingForm = ({ spot }) => {
                 <div>{currentSpot.city}, {currentSpot.state}</div>
               </div>
               <div id='bcm-dates-container'>
-              <div id='bcm-dates'>
-                <div>{startDate.toDateString()} to {endDate.toDateString()}</div>
-                <div>{!showEditCal ?
-                  <button className='change-confirm' onClick={() => setShowEditCal(true)}>change</button> :
-                  <button className='change-confirm' onClick={() => setShowEditCal(false)} >confirm</button>}
+                <div id='bcm-dates'>
+                  <div>{startDate.toDateString()} to {endDate.toDateString()}</div>
+                  <div>{!showEditCal ?
+                    <button className='change-confirm' onClick={() => setShowEditCal(true)}>change</button> :
+                    <button className='change-confirm' onClick={() => setShowEditCal(false)} >confirm</button>}
+                  </div>
                 </div>
+                {showEditCal && (
+                  <div className='bcm-booking-dates'>
+                    <div className='booking-checkin'>
+                      <label className='check-in-out'>CHECK-IN</label>
+                      <DatePicker
+                        className='datePicker'
+                        selected={startDate}
+                        onSelect={(date) => setStartDate(date)}
+                      />
+                    </div>
+                    <div className='booking-checkout'>
+                      <label className='check-in-out'>CHECKOUT</label>
+                      <DatePicker
+                        className='datePicker'
+                        selected={endDate}
+                        onSelect={(date) => setEndDate(date)}
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
-              
-
-              {showEditCal && (
-                <div className='bcm-booking-dates'>
-                  <div className='booking-checkin'>
-                    <label className='check-in-out'>CHECK-IN</label>
-                    <DatePicker
-                      className='datePicker'
-                      selected={startDate}
-                      onSelect={(date) => setStartDate(date)}
-                    />
-                  </div>
-                  <div className='booking-checkout'>
-                    <label className='check-in-out'>CHECKOUT</label>
-                    <DatePicker
-                      className='datePicker'
-                      selected={endDate}
-                      onSelect={(date) => setEndDate(date)}
-                    />
-                  </div>
-                </div>
-              )}
-</div>
               <div className='bcm-booking-charges'>
                 <div className='booking-fees'>${spotPrice} x {numDays(startDate, endDate)} nights</div>
                 <div>${numDays(startDate, endDate) * spotPrice}</div>
@@ -134,7 +124,7 @@ const BookingForm = ({ spot }) => {
               </div>
               <div className='booking-charges'>
                 <div className='booking-fees'>Tax </div>
-                <div>${Math.floor((numDays(startDate, endDate) * spotPrice + 150 + 313)*.14)}</div>
+                <div>${Math.floor((numDays(startDate, endDate) * spotPrice + 150 + 313) * .14)}</div>
               </div>
               <div id='bcm-booking-total'>
                 <div>Your Total</div>

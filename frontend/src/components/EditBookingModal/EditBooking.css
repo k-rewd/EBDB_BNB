@@ -1,0 +1,11 @@
+#edit-booking-modal {
+  height: fit-content;
+  width: 400px;
+  padding: 20px;
+}
+
+#eb-spot-details {
+  margin: 20px 0;
+  font-size: 14px;
+  font-weight: bold;
+}

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { NavLink } from 'react-router-dom'
 
 import { deleteBookingThunk, getUserBookingsThunk } from "../../store/bookings"
+import EditBookingModal from "../EditBookingModal/EditBooking"
 import './MyBookings.css'
 
 const MyBookingsIndex = () => {
@@ -46,7 +47,8 @@ const MyBookingsIndex = () => {
                 </div>
               </div>
               <div id='mb-edit-del'>
-                <button id='mb-edit'>edit </button> |
+                <button id='mb-edit'>edit </button>
+                <EditBookingModal bookings={booking}/> |
                 <button id='mb-delete' onClick={() =>dispatch(deleteBookingThunk(booking.id))}>delete</button>
               </div>
             </div>
