@@ -99,11 +99,11 @@ export const updateBookingThunk = (payload) => async dispatch => {
 
 // Delete booking /api/bookings/:bookingId
 export const deleteBookingThunk = (id) => async dispatch => {
-  const response = await fetch(`/api/recipes/${id}`, {
+  const response = await csrfFetch(`/api/bookings/${id}`, {
     method: 'DELETE',
   })
   if (response.ok) {
-    dispatch(actionDeleteBooking(id));
+    await dispatch(actionDeleteBooking(id));
   }
   return;
 }
