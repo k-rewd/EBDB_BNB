@@ -97,15 +97,13 @@
   
 }
 
-#mb-delete,
-#mb-edit {
+#mb-delete {
   border: none;
   background: none;
   font-weight: bold;
   font-size: 12px;
 }
 
-#mb-delete,
-#mb-edit:hover {
+#mb-delete:hover {
   cursor: pointer;
 }

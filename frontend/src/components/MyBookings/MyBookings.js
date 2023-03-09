@@ -47,8 +47,7 @@ const MyBookingsIndex = () => {
                 </div>
               </div>
               <div id='mb-edit-del'>
-                <button id='mb-edit'>edit </button>
-                <EditBookingModal bookings={booking}/> |
+                <EditBookingModal id='mb-edit' bookings={booking} /> |
                 <button id='mb-delete' onClick={() =>dispatch(deleteBookingThunk(booking.id))}>delete</button>
               </div>
             </div>

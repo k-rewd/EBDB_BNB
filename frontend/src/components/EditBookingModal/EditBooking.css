@@ -9,3 +9,90 @@
   font-size: 14px;
   font-weight: bold;
 }
+
+#eb-dates-container {
+  height: 100px;
+}
+
+#eb-dates {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eb-change-confirm {
+  border: none;
+  background: none;
+  color: #FF385C;
+  font-weight: 600;
+}
+
+.eb-change-confirm:hover {
+  cursor: pointer;
+}
+
+.eb-booking-dates {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.eb-booking-checkin {
+  padding: 0px 10px 10px 10px;
+  border: 1px solid darkgray;
+  border-radius: 8px 0px 0px 8px;
+}
+.eb-check-in-out {
+  font-size: 10px;
+  padding: 5px;
+}
+.eb-booking-checkout {
+  padding: 0px 10px 10px 10px;
+  border: 1px solid darkgray;
+  border-left: none;
+  border-radius: 0px 8px 8px 0px;
+}
+.eb-booking-charges {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.eb-booking-fees {
+  text-decoration: underline;
+}
+
+#eb-booking-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid darkgray;
+  padding: 20px 0px;
+  font-weight: 600;
+}
+
+#eb-bookspot {
+  border: none;
+  border-radius: 8px;
+  background-color: #FF385C;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+}
+
+#eb-bookspot:hover {
+  cursor: pointer;
+}
+
+#mb-edit {
+  border: none;
+  background: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#mb-edit:hover {
+  cursor: pointer;
+}
