@@ -25,11 +25,10 @@
   background: none;
   color: #FF385C;
   font-weight: 600;
+  cursor: pointer;
+
 }
 
-.eb-change-confirm:hover {
-  cursor: pointer;
-}
 
 .eb-booking-dates {
   display: flex;
@@ -80,19 +79,16 @@
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   width: 100%;
+  cursor: pointer;
+
 }
 
-#eb-bookspot:hover {
-  cursor: pointer;
-}
 
 #mb-edit {
   border: none;
   background: none;
   font-weight: bold;
   font-size: 12px;
-}
-
-#mb-edit:hover {
   cursor: pointer;
+
 }

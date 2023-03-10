@@ -5,6 +5,7 @@ const GET_SPOT_BOOKINGS = 'bookings/getSpotBookings';
 const NEW_BOOKING = 'bookings/newBooking';
 const UPDATE_BOOKING = 'bookings/updateBooking';
 const DELETE_BOOKING = 'bookings/deleteBooking';
+// const RESET_BOOKING = 'bookings/resetBooking';
 
 const actionGetUserBookings = (payload) => {
   return {
@@ -41,7 +42,12 @@ const actionDeleteBooking = (payload) => {
   }
 }
 
-
+// export const actionResetBooking = () => {
+//   return {
+//     type: RESET_BOOKING,
+//     data: {}
+//   }
+// }
 
 
 // Get all of the Current User's Bookings /api/bookings/current
@@ -84,7 +90,6 @@ export const newBookingThunk = (payload) => async dispatch => {
 
 // Update and return an existing booking. /api/bookings/:bookingId
 export const updateBookingThunk = (payload) => async dispatch => {
-  console.log('payload', payload)
   const response = await csrfFetch(`/api/bookings/${payload.id}`, {
     method: 'PUT',
     headers: { 'Content-Type' : 'application/json' },
@@ -118,18 +123,18 @@ export const bookingReducer = (state = initialState, action) => {
   let newState = {...state}
   switch (action.type) {
     case GET_USER_BOOKINGS:
-      newState = {}
+      // newState = {}
       action.payload.Bookings.forEach(booking => {
         newState[booking.id] = { ...newState[booking.id], ...booking}
       })
       return newState
       
     case GET_SPOT_BOOKINGS:
-      newState = {}
+      // newState = {}
       action.payload.Bookings.forEach(booking => {
         newState[booking.id] = { ...newState[booking.id], ...booking}
       });
-      console.log('newState from reducer', newState)
+      // console.log('newState from reducer', newState)
       return newState
 
     case NEW_BOOKING:
@@ -139,6 +144,9 @@ export const bookingReducer = (state = initialState, action) => {
     case UPDATE_BOOKING:
       newState[action.payload.id] = { ...newState[action.payload.id], ...action.payload }
       return newState
+
+    // case RESET_BOOKING:
+    //   return initialState
 
     case DELETE_BOOKING:
       delete newState[action.payload]

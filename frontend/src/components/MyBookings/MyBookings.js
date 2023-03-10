@@ -32,7 +32,7 @@ const MyBookingsIndex = () => {
             <div key={booking.id} id='mb-card'>
               <div id='mb-img-container'>
                 <NavLink to={`/spots/${booking.Spot.id}`} >
-                  <img id='mb-card-img' src={booking.Spot.previewImage} />
+                  <img id='mb-card-img' onError={(e) => e.target.src= "https://cdn-icons-png.flaticon.com/512/70/70644.png"} src={booking.Spot.previewImage} />
                 </NavLink>
                 <div id='mb-info'>
                   <div id='mb-name-place'>
