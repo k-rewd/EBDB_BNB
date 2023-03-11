@@ -23,9 +23,9 @@ const SpotDetailIndex = () => {
 
   const dispatch = useDispatch()
 
-  useEffect(async () => {
-    await dispatch(spotOne(spotId))
-    await dispatch(getSpotBookingsThunk(spotId))
+  useEffect(() => {
+    dispatch(spotOne(spotId))
+    dispatch(getSpotBookingsThunk(spotId))
       .then(() => setIsLoaded(true))
   }, [dispatch, spotId])
 

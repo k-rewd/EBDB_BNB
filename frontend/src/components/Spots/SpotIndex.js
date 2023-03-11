@@ -8,7 +8,7 @@ const SpotIndex = () => {
   const spots = useSelector(state => state.spots.allSpots)
   // const user = useSelector((state) => state.session.user)
 
-  // console.log('spots', spots)
+  console.log('spots', spots)
   // console.log('userrr', user)
 
   const dispatch = useDispatch()

@@ -22,7 +22,7 @@ function ReviewFormModal() {
   let updateReview;
   if(sessionUser) updateReview = allReviews.find(review => review.User.id === sessionUser.id)
   
-  // console.log('updateReview', updateReview)
+  console.log('updateReview', updateReview)
   // 
   return (
     <>
