@@ -85,12 +85,16 @@
   border: 1px solid gray;
 }
 .leave-review-pink-button {
-  width: 100%;
+  border: none;
+  border-radius: 8px;
   background-color: #FF385C;
-  /* border-radius: 0 0 5px 5px; */
   color: white;
+  text-align: center;
+  font-size: 16px;
   font-weight: bold;
-  border: 1px solid gray;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+  cursor: pointer;
 }
 
 

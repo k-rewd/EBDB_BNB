@@ -32,7 +32,7 @@ const SpotReviewIndex = () => {
           <div id='spot-review-index'>
             <div id='review-user-stars'>
               <div>★{review.stars}</div>
-              <div id='review-name'>{review.User.firstName} {review.User.lastName}</div>
+              <div id='review-name'>{review.User?.firstName} {review.User?.lastName}</div>
               {/* <div>{review.updatedAt ? review.updatedAt : review.createdAt}</div> */}
             </div>
             <div id='review-review'>"{review.review}"</div>

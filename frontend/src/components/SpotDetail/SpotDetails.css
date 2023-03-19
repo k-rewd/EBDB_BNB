@@ -93,7 +93,7 @@
 
 #details {
   /* border: 1px solid red; */
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   gap: 100px
 }
@@ -104,8 +104,12 @@
 }
 
 #detail-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid lightgray;
-  padding: 10px 0px;
+  padding-bottom: 10px;
+  
 
 }
 
@@ -143,10 +147,11 @@
   right: 390px;
   /* top: 673px; */
   width: 375px;
-  height: 420px;
+  height: 395px;
   /* border: 1px solid lightgray; */
   box-shadow: 5px 5px 20px 5px lightgray;
   border-radius: 3%;
+  margin-top: 20px;
   /* position: fixed; */
   /* background-color: whitesmoke; */
 

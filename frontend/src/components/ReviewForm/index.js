@@ -11,7 +11,7 @@ function ReviewFormModal() {
   const reviews = useSelector(state => state.reviews.spotReviews)
   // console.log('review', reviews)
   const allReviews = Object.values(reviews);
-  // console.log('allReview', allReviews)
+  console.log('allReview', allReviews)
   // 
   const currentSpot = useSelector(state => state.spots.singleSpot )
   // console.log('currentSpot', currentSpot)
@@ -20,7 +20,7 @@ function ReviewFormModal() {
   if(sessionUser) userSpotReview = (currentSpot.ownerId === sessionUser.id)
   
   let updateReview;
-  if(sessionUser) updateReview = allReviews.find(review => review.User.id === sessionUser.id)
+  if(sessionUser) updateReview = allReviews.find(review => review.userId === sessionUser.id)
   
   console.log('updateReview', updateReview)
   // 

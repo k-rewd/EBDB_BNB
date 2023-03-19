@@ -10,8 +10,12 @@ import BookingForm from "../BookingModal/BookingForm"
 
 const SpotDetailIndex = () => {
   const spotDetail = useSelector(state => state.spots.singleSpot)
+  console.log('spotDetail', spotDetail)
   const spotBookings = useSelector(state => state)
   console.log('spotBookings', spotBookings)
+  const spotImg = spotDetail.SpotImages
+  console.log('spotImg', spotImg)
+
   // const spot = spotDetail.SpotImages
   // console.log('spotDetailIndexSpot', spot)
 
@@ -65,8 +69,7 @@ const SpotDetailIndex = () => {
             <div id='details-left'>
               <div id="detail-title">
                 <div><h2 >Property Hosted By {spotDetail.Owner.firstName}</h2></div>
-                <div id='night'>
-                </div>
+              <div><ReviewFormModal /></div>
               </div>
               <div className="amenities">
                 <div className="amenities-inline">
@@ -91,30 +94,24 @@ const SpotDetailIndex = () => {
                 <p className="aircover-description">Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</p>
               </div>
               <div id="spot-description">{spotDetail.description}</div>
-              <div><ReviewFormModal /></div>
-              <div id='spot-reviews'><SpotReviewIndex /></div>
             </div>
-
             <div id='details-right'>
               <div id='details-right-container'>
                 <div id='spot-details-row'>
                   <div className="spot-detail-price"><div id='price'>${spotDetail.price}</div><div> night</div></div>
-
                   <div id='rating-reviews'>
                     <div>★{!spotDetail.avgStarRating ? <strong>new!</strong> : spotDetail.avgStarRating}</div>
                     <strong>·</strong>
                     <div>{spotDetail.numReviews === 1 ? <div>{spotDetail.numReviews} review</div> : <div>{spotDetail.numReviews} reviews</div>}</div>
                   </div>
                 </div>
-                <div id="reviews">
-
-                </div>
                 <div><BookingForm spot={spotDetail} /></div>
               </div>
             </div>
-
           </div>
-
+          <div id="reviews">
+            <div id='spot-reviews'><SpotReviewIndex /></div>
+          </div>
         </div>
       </div>
     )
