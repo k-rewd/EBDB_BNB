@@ -153,10 +153,15 @@ background: transparent; */
   padding:5px;
   padding-left:8px;
   width: 400px;
+  outline: none;
 }
 /* .search-in {
   border: 1px solid red;
 } */
+
+.search-bar-input input {
+  border: none;
+}
 
 .search-results {
   position:absolute;

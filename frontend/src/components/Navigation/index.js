@@ -103,13 +103,13 @@ function Navigation({ isLoaded }) {
       </div>
       <div id='search-bar'>
         <form >
-          <label>
+          <div className='input-box'>
             <input className='search-bar-input'
             placeholder='search...'
             type='search'
             value={query}
             onChange={newQuery}/>
-          </label>
+          </div>
         </form>
         {searchContainer ? 
         <div className='search-results'>
