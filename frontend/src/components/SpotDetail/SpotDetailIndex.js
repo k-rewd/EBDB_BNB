@@ -11,10 +11,11 @@ import BookingForm from "../BookingModal/BookingForm"
 const SpotDetailIndex = () => {
   const spotDetail = useSelector(state => state.spots.singleSpot)
   console.log('spotDetail', spotDetail)
+  // spot detail not being read when user is not logged in
   const spotBookings = useSelector(state => state)
-  console.log('spotBookings', spotBookings)
+  // console.log('spotBookings', spotBookings)
   const spotImg = spotDetail.SpotImages
-  console.log('spotImg', spotImg)
+  // console.log('spotImg', spotImg)
 
   // const spot = spotDetail.SpotImages
   // console.log('spotDetailIndexSpot', spot)
