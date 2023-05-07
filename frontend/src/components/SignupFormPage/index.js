@@ -64,7 +64,6 @@ function SignupFormPage() {
     <div className="sign-up-outer-most">
 
       <div className="sign-up-form-content-area">
-        {/* <img src={ebdbbnb} className='ebdbbnb-img' /> */}
 
         <form onSubmit={handleSubmit} className='sign-up-form'>
           <h4 id="welcome-signup"> Welcome to the EBDB Bed & Breakfast</h4>
@@ -112,14 +111,16 @@ function SignupFormPage() {
 
           <button className="sign-up-jin-pink-buttons" type="submit">Sign Up</button>
         </form>
-        <ul className="sign-up-errors">
+        {/* <ul className="sign-up-errors">
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        </ul>
+        </ul> */}
         <ul>
           {frontErrors && validationErrors.length > 0 && validationErrors.map(error => (
             <li className="error-messages" key={error}>{error}</li>))}
         </ul>
+      <img src={ebdbbnb} className='ebdbbnb-img' />
       </div>
+
       </div>
   );
 }

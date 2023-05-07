@@ -1,19 +1,26 @@
 .sign-up-outer-most {
   /* margin-left: 450px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
-
+  /* background-color: lightgray; */
+  /* height: 92vh; */
 }
 
 .ebdbbnb-img {
-  height: 450px;
+  /* height: 450px; */
 }
 
 .sign-up-form-content-area {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   margin: 100px;
-  /* display: flex; */
+  
+  display: flex;
+  background-color: white;
+  box-shadow: 2px 2px 5px 2px lightgray;
+  /* padding: 50px; */
+  
+
   
   /* width: 50%; */
 }
@@ -23,6 +30,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 10px;
+  
+  /* border: 1px solid blue; */
+
  }
  
  .sign-up-jin-pink-buttons {

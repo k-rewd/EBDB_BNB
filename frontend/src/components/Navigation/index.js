@@ -40,14 +40,14 @@ function Navigation({ isLoaded }) {
         const result = await dispatch(searchThunk(query))
         // console.log('is it working RESULT', result)
         if (result) {
-        // console.log('is it working RESULT', result)
+          // console.log('is it working RESULT', result)
 
           setSearchBox(result)
-          
+
           setSearchContainer(true)
           return
         }
-      } 
+      }
       getData()
       setSearchBox(false)
 
@@ -63,7 +63,7 @@ function Navigation({ isLoaded }) {
     };
 
     document.addEventListener('click', closeMenu);
-  
+
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
@@ -73,14 +73,14 @@ function Navigation({ isLoaded }) {
     }
     document.addEventListener('click', clickAway);
     return () => document.removeEventListener('click', clickAway);
-  },[searchContainer])
+  }, [searchContainer])
 
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
       <div>
         <ProfileButton user={sessionUser} />
-        
+
         {/* <CreateSpotModal />
         <NavLink to="/current">My Spots</NavLink>
         <NavLink to={"/reviews/current"}>My Reviews</NavLink> */}
@@ -97,36 +97,36 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className='nav-frame'>
-      <div style={sessionUser ? {width:'280px'} : {width:'166px'}}>
+      <div style={sessionUser ? { width: '280px' } : { width: '166px' }}>
         <NavLink exact to="/"><img id='ebdbbnb-icon' src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
-        alt="logo" style={{ margin:'0px', padding:'0px' }} /></NavLink>
+          alt="logo" style={{ margin: '0px', padding: '0px' }} /></NavLink>
       </div>
       <div id='search-bar'>
         <form >
           <div className='input-box'>
             <input className='search-bar-input'
-            placeholder='search...'
-            type='search'
-            value={query}
-            onChange={newQuery}/>
+              placeholder='search...'
+              type='search'
+              value={query}
+              onChange={newQuery} />
           </div>
         </form>
-        {searchContainer ? 
-        <div className='search-results'>
-          {query && searchContainer &&
-          <div >
-            {searchBox.length > 0 ? <div className='search-name'>{searchBox.map((data)=> (
-              <NavLink key={data.id} to={`/spots/${data.id}`} className='one-search'>
-                <div>{data.name}</div>
-                <div className='search-city-state'>{data.city}, {data.state}</div>
-                </NavLink>
-              ))}
-              </div>:
-              <div>No results found!</div>
-              }
-        </div>
-        }
-      </div>:null}
+        {searchContainer ?
+          <div className='search-results'>
+            {query && searchContainer &&
+              <div >
+                {searchBox.length > 0 ? <div className='search-name'>{searchBox.map((data) => (
+                  <NavLink key={data.id} to={`/spots/${data.id}`} className='one-search'>
+                    <div>{data.name}</div>
+                    <div className='search-city-state'>{data.city}, {data.state}</div>
+                  </NavLink>
+                ))}
+                </div> :
+                  <div>No results found!</div>
+                }
+              </div>
+            }
+          </div> : null}
       </div>
 
 
@@ -134,7 +134,7 @@ function Navigation({ isLoaded }) {
       <div>
         {isLoaded && sessionLinks}
       </div>
-      
+
 
     </div>
   );
