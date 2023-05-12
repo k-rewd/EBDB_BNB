@@ -1,6 +1,8 @@
 import DatePicker from 'react-datepicker'
 
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
+
 import { Modal } from '../../context/Modal';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
@@ -68,7 +70,14 @@ const BookingForm = ({ spot }) => {
           </div>
         </div>
 
-        <button id='booking-reserve' onClick={() => setShowModal(true)}>Reserve</button>
+        <div>
+          {sessionUser ? <button id='booking-reserve' onClick={() => setShowModal(true)}>Reserve</button> :
+            <NavLink to="/signup"><strong className='sign-up-button'>SIGN UP</strong></NavLink>
+                }
+
+        </div>
+
+        
 
 
 
