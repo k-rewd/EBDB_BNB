@@ -72,7 +72,7 @@ const BookingForm = ({ spot }) => {
 
         <div>
           {sessionUser ? <button id='booking-reserve' onClick={() => setShowModal(true)}>Reserve</button> :
-            <NavLink to="/signup"><strong className='sign-up-button'>SIGN UP</strong></NavLink>
+            <NavLink to="/signup"><button id='booking-sign-up-button'>SIGN UP</button></NavLink>
                 }
 
         </div>
