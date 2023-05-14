@@ -31,24 +31,28 @@ function LoginForm() {
   return (
     <div className='login-form-modal'>
       <h2 className="welcome-message">Welcome to the EBDB BnB</h2>
+      <p id='instructions'>Please sign in with your proper credentials, or click "DEMO USER" to take advantage of this website and all it's features</p>
       <form onSubmit={handleSubmit} id='login-form'>
 
+        <div className='login-info-container'>
+          <label className='input-prompt-label'> Username or Email </label>
+          <input className='login-info'
+            type="text"
+            value={credential}
+            onChange={(e) => setCredential(e.target.value)}
+            placeholder="Username or Email"
+          />
+        </div>
 
-        <label className='input-prompt-label'> Username or Email </label>
-        <input className='login-info'
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          placeholder="Username or Email"
-        />
-
-        <label className='input-prompt-label'> Password</label>
-        <input className='login-info'
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
+        <div className='login-info-container'>
+          <label className='input-prompt-label'> Password</label>
+          <input className='login-info'
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+        </div>
 
 
 
