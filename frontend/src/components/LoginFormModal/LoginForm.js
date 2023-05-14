@@ -34,41 +34,42 @@ function LoginForm() {
       <form onSubmit={handleSubmit} id='login-form'>
 
 
-        {/* <label className='input-prompt-label'> Username or Email </label> */}
-        <input className='login-username-email'
+        <label className='input-prompt-label'> Username or Email </label>
+        <input className='login-info'
           type="text"
           value={credential}
           onChange={(e) => setCredential(e.target.value)}
           placeholder="Username or Email"
         />
 
-        {/* <label className='input-prompt-label'> Password</label> */}
-        <input className='login-password'
+        <label className='input-prompt-label'> Password</label>
+        <input className='login-info'
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
 
-        <div className='two-buttons-row'>
-          <div><button className='pink-buttons' type="submit">Log In</button></div>
-          <div><button className='pink-buttons' onClick={() => {
-            setCredential("Childish")
-            setPassword("password")
-          }}>DEMO USER</button>
-          </div>
-        </div>
 
 
 
       </form>
-        <div className="error-message-container">
-          <ul>
-            {errors.map((error, idx) => (
-              <li className="error-messages" key={idx}>{error}</li>
-            ))}
-          </ul>
+      <div className="error-message-container">
+        <ul>
+          {errors.map((error, idx) => (
+            <li className="error-messages" key={idx}>{error}</li>
+          ))}
+        </ul>
+      </div>
+      <div className='two-buttons-row'>
+        <div><button className='pink-buttons' type="submit">Log In</button></div>
+        <div><button className='pink-buttons' onClick={() => {
+          setCredential("Childish")
+          setPassword("password")
+        }}>DEMO USER</button>
         </div>
+      </div>
+
     </div>
   );
 }
