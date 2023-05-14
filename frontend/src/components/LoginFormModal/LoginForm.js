@@ -57,7 +57,7 @@ function LoginForm() {
 
 
 
-      </form>
+      
       <div className="error-message-container">
         <ul>
           {errors.map((error, idx) => (
@@ -73,7 +73,7 @@ function LoginForm() {
         }}>DEMO USER</button>
         </div>
       </div>
-
+      </form>
     </div>
   );
 }
