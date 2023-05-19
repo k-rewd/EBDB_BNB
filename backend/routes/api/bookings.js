@@ -4,7 +4,7 @@ const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { User, Spot, SpotImage, Booking, Review, ReviewImage } = require('../../db/models')
 
 // Get all of the Current User's Bookings
-router.get('/current', requireAuth, async(req, res) => {
+router.get('/current', async(req, res) => {
   const currentBookings = await Booking.findAll({
     where: {
       userId: req.user.id
