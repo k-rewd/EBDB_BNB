@@ -108,7 +108,7 @@ const SpotDetailIndex = () => {
                   </div>
                 </div>
                 {/* <div><BookingForm spot={spotDetail} /></div> */}
-                <div>{sessionUser ? <BookingForm spot={spotDetail} /> : <div>signin</div>}</div>
+                <div>{sessionUser ? <BookingForm spot={spotDetail} /> : <div>UNDER MAINTENANCE - SIGN IN TO BOOK</div>}</div>
 
               </div>
             </div>
