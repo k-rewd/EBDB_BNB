@@ -76,7 +76,7 @@
 }
 
 .pink-buttons {
-  width: 200px;
+  width: 350px;
 
   border: none;
   border-radius: 8px;
@@ -91,5 +91,7 @@
 
 .pink-buttons:hover {
   cursor: pointer;
+  background-color: white;
+  color: #FF385C;
   /* box-shadow: 2px 2px 1px 1px gray; */
 }
