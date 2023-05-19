@@ -31,7 +31,7 @@ const SpotDetailIndex = () => {
 
   useEffect(() => {
     dispatch(spotOne(spotId))
-    dispatch(getSpotBookingsThunk(spotId))
+    // dispatch(getSpotBookingsThunk(spotId))
       .then(() => setIsLoaded(true))
   }, [dispatch, spotId])
 
