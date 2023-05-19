@@ -10,6 +10,7 @@ import BookingForm from "../BookingModal/BookingForm"
 
 const SpotDetailIndex = () => {
   const spotDetail = useSelector(state => state.spots.singleSpot)
+  const sessionUser = useSelector(state => state.session.user)
   console.log('spotDetail', spotDetail)
   // spot detail not being read when user is not logged in
   const spotBookings = useSelector(state => state)
@@ -106,8 +107,8 @@ const SpotDetailIndex = () => {
                     <div>{spotDetail.numReviews === 1 ? <div>{spotDetail.numReviews} review</div> : <div>{spotDetail.numReviews} reviews</div>}</div>
                   </div>
                 </div>
-                <div><BookingForm spot={spotDetail} /></div>
-                {/* <div>{sessionUser ? <BookingForm spot={spotDetail} /> : <div>signin</div>}</div> */}
+                {/* <div><BookingForm spot={spotDetail} /></div> */}
+                <div>{sessionUser ? <BookingForm spot={spotDetail} /> : <div>signin</div>}</div>
 
               </div>
             </div>

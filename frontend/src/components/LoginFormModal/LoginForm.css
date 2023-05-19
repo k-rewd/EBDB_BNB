@@ -29,10 +29,11 @@
 .welcome-message {
   /* display: flex; */
   /* align-items: center; */
+  margin-top: 10px;
 }
 #instructions {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   padding: 15px;
 }
 
@@ -54,28 +55,41 @@
   gap: 5px;
  }
 .login-info {
-  width: 80%;
+  width: 100%;
   height: 40px;
 
 }
 
 .error-message-container {
   /* border: 1px solid red; */
-  height: 50%;
+  height: 25%;
   width: 100%;
 }
 
 
 .two-buttons-row {
   display: flex;
-  /* flex-direction: row; */
-  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  /* width: 100%; */
 }
 
 .pink-buttons {
   width: 200px;
+
+  border: none;
+  border-radius: 8px;
   background-color: #FF385C;
   color: white;
+  text-align: center;
+  font-size: 16px;
   font-weight: bold;
-  border: 1px solid gray;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+.pink-buttons:hover {
+  cursor: pointer;
+  /* box-shadow: 2px 2px 1px 1px gray; */
 }
