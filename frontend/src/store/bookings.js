@@ -63,7 +63,7 @@ export const getUserBookingsThunk = () => async dispatch => {
 
 // Get all Bookings for a Spot based on the Spot's id /spots/:spotId/bookings
 export const getSpotBookingsThunk = (payload) => async dispatch => {
-  const response = await fetch(`/api/spots/${payload}/bookings`);
+  const response = await csrfFetch(`/api/spots/${payload}/bookings`);
   console.log('response from bookings thunk', response)
   if(response.ok) {
     const spotBookings = await response.json();
