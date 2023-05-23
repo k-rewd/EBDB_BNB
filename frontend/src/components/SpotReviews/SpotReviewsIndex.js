@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useParams } from 'react-router-dom'
 import { getSpotReviewsThunk } from "../../store/reviews"
 import './SpotReviewIndex.css'
+import * as moment from 'moment'
 
 const SpotReviewIndex = () => {
   const spotReview = useSelector(state => state.reviews.spotReviews)
@@ -26,20 +27,25 @@ const SpotReviewIndex = () => {
   if (!newSpotReview) {
     return null
   } else {
-    return isLoaded &&
+    return (isLoaded &&
+
       newSpotReview.map(review => (
-        <div id='one-review'>
+        <div id='reviews-container'>
           <div id='spot-review-index'>
             <div id='review-user-stars'>
               <div>★{review.stars}</div>
+              <div id='username-moment'>
               <div id='review-name'>{review.User?.firstName} {review.User?.lastName}</div>
               {/* <div>{review.updatedAt ? review.updatedAt : review.createdAt}</div> */}
+              <div>{review.updatedAt ? moment(review.updatedAt).fromNow() : moment(review.createdAt).fromNow()}</div>
+            </div>
             </div>
             <div id='review-review'>"{review.review}"</div>
           </div>
         </div>
-      ))
+      )))
   }
 }
+
 
 export default SpotReviewIndex
