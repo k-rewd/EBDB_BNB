@@ -198,17 +198,16 @@
 
 
 
-#goog-map {
+#map-area {
   border: 1px solid rebeccapurple;
+  width: 50%;
 }
 
 
 #reviews {
-  max-height: 300px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  overflow-y:auto;
-  padding: 5px;
+  border: 1px solid rebeccapurple;
+  width: 50%;
+
   
 
 }

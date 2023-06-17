@@ -2,15 +2,15 @@
 #reviews-container {
   display: flex;
   width: 100%;
-  justify-content:flex-end;
+  border: 1px solid red;
 
 }
 
 
 
 #spot-review-index {
-  margin: 20px 0;
-  width: 40%;
+
+
   
 }
 #review-user-stars {
@@ -39,6 +39,6 @@
   padding: 5px;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   
-}
+} */
