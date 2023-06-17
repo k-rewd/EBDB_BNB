@@ -179,6 +179,15 @@
   font-weight: bold;
 }
 
+/* #map-reviews {
+  display: flex;
+} */
+
+
+#goog-map {
+  border: 1px solid rebeccapurple;
+}
+
 #rating-reviews {
   width: 50%;
   display: flex;
