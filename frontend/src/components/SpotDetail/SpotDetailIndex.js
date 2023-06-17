@@ -31,7 +31,7 @@ const SpotDetailIndex = () => {
 
   useEffect(() => {
     dispatch(spotOne(spotId))
-    // dispatch(getSpotBookingsThunk(spotId))
+      // dispatch(getSpotBookingsThunk(spotId))
       .then(() => setIsLoaded(true))
   }, [dispatch, spotId])
 
@@ -71,7 +71,7 @@ const SpotDetailIndex = () => {
             <div id='details-left'>
               <div id="detail-title">
                 <div><h2 >Property Hosted By {spotDetail.Owner.firstName}</h2></div>
-              <div><ReviewFormModal /></div>
+                <div><ReviewFormModal /></div>
               </div>
               <div className="amenities">
                 <div className="amenities-inline">
@@ -114,10 +114,10 @@ const SpotDetailIndex = () => {
             </div>
           </div>
           <div id='map-reviews'>
-          <div id='goog-map'>map area</div>
-          <div id="reviews">
-            <div id='spot-reviews'><SpotReviewIndex /></div>
-          </div>
+            <div id='goog-map'>map area</div>
+            <div id="reviews">
+              <div id='spot-reviews'><SpotReviewIndex /></div>
+            </div>
           </div>
         </div>
       </div>

@@ -167,6 +167,16 @@
 
 }
 
+#rating-reviews {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: center;
+  font-size: 14px;
+  gap: 10px;
+
+}
 .spot-detail-price {
   width: 50%;
   display: flex;
@@ -179,43 +189,31 @@
   font-weight: bold;
 }
 
-/* #map-reviews {
+#map-reviews {
+  border: 1px solid red;
   display: flex;
-} */
+  justify-content: space-between;
+  width: 100%;
+}
+
 
 
 #goog-map {
   border: 1px solid rebeccapurple;
 }
 
-#rating-reviews {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-self: center;
-  font-size: 14px;
-  gap: 10px;
-
-}
 
 #reviews {
-  /* border: 1px solid red; */
   max-height: 300px;
   margin-top: 10px;
   margin-bottom: 5px;
   overflow-y:auto;
-  /* border: 1px solid lightgray; */
-  /* border-radius: 10px; */
-  /* height: 300px; */
-  /* background-color: white; */
   padding: 5px;
   
 
 }
 
 #spot-reviews {
-  /* padding: 10px 0px; */
 
   display: flex;
   flex-direction: column-reverse;
