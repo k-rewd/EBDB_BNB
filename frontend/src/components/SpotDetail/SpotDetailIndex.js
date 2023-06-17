@@ -113,6 +113,7 @@ const SpotDetailIndex = () => {
               </div>
             </div>
           </div>
+          <div id='goog-map'>map area</div>
           <div id="reviews">
             <div id='spot-reviews'><SpotReviewIndex /></div>
           </div>
