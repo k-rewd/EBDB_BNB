@@ -37,7 +37,7 @@ const SpotReviewIndex = () => {
               <div id='username-moment'>
               <div id='review-name'>{review.User?.firstName} {review.User?.lastName}</div>
               {/* <div>{review.updatedAt ? review.updatedAt : review.createdAt}</div> */}
-              <div>{review.updatedAt ? moment(review.updatedAt).fromNow() : moment(review.createdAt).fromNow()}</div>
+              <div id='review-moment'>{review.updatedAt ? moment(review.updatedAt).fromNow() : moment(review.createdAt).fromNow()}</div>
             </div>
             </div>
             <div id='review-review'>"{review.review}"</div>
