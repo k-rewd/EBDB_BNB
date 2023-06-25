@@ -1,43 +1,4 @@
 
-#reviews-container {
-  display: flex;
-  width: 100%;
-  border: 1px solid red;
-
-}
-
-
-
-/* #spot-review-index {
-
-
-  
-} */
-#review-user-stars {
-  display: flex;
-  gap: 10px;
-  border-top: 1px solid lightgray;
-
-  
-
-}
-#review-name {
-  font-weight:600;
-  
-
-}
-#username-moment {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  
-
-}
-#review-review {
-  word-wrap: break-word;
-  font-size: 14px;
-  padding: 5px;
-}
 
 /* @media (max-width: 600px) {
   
