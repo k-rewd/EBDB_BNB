@@ -64,60 +64,61 @@ function SignupFormPage() {
     <div className="sign-up-outer-most">
 
       <div className="sign-up-form-content-area">
+        <div id='sign-up-form-errors'>
+          <form onSubmit={handleSubmit} className='sign-up-form'>
+            <h4 id="welcome-signup"> Welcome to the EBDB Bed & Breakfast</h4>
 
-        <form onSubmit={handleSubmit} className='sign-up-form'>
-          <h4 id="welcome-signup"> Welcome to the EBDB Bed & Breakfast</h4>
+            <input
+              placeholder="First Name"
+              type="text"
+              min='2'
+              max='15'
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              required />
+            <input
+              placeholder="Last Name"
+              min='2'
+              max='10'
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required />
+            <input
+              placeholder="Email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required />
+            <input
+              placeholder="Username"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required />
+            <input
+              placeholder="Password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required />
+            <input
+              placeholder="Confirm Password"
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required />
 
-          <input
-            placeholder="First Name"
-            type="text"
-            min='2'
-            max='15'
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            required />
-          <input
-            placeholder="Last Name"
-            min='2'
-            max='10'
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            required />
-          <input
-            placeholder="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required />
-          <input
-            placeholder="Username"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required />
-          <input
-            placeholder="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required />
-          <input
-            placeholder="Confirm Password"
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required />
-
-          <button className="sign-up-jin-pink-buttons" type="submit">Sign Up</button>
-        </form>
-        {/* <ul className="sign-up-errors">
+            <button className="sign-up-jin-pink-buttons" type="submit">Sign Up</button>
+          </form>
+          {/* <ul className="sign-up-errors">
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul> */}
-        <ul id='sign-up-errors'>
-          {frontErrors && validationErrors.length > 0 && validationErrors.map(error => (
-            <li className="error-messages" key={error}>{error}</li>))}
-        </ul>
+          <ul id='sign-up-errors'>
+            {frontErrors && validationErrors.length > 0 && validationErrors.map(error => (
+              <li className="error-messages" key={error}>{error}</li>))}
+          </ul>
+        </div>
         <img src={ebdbbnb} className='ebdbbnb-img' />
       </div>
 
