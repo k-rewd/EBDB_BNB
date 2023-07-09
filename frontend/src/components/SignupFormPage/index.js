@@ -114,14 +114,14 @@ function SignupFormPage() {
         {/* <ul className="sign-up-errors">
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul> */}
-        <ul>
+        <ul id='sign-up-errors'>
           {frontErrors && validationErrors.length > 0 && validationErrors.map(error => (
             <li className="error-messages" key={error}>{error}</li>))}
         </ul>
-      <img src={ebdbbnb} className='ebdbbnb-img' />
+        <img src={ebdbbnb} className='ebdbbnb-img' />
       </div>
 
-      </div>
+    </div>
   );
 }
 
