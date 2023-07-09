@@ -30,7 +30,7 @@ function SignupFormPage() {
     if (lastName.length < 2 || lastName.length > 10) errors.push('Last name char. limit(min:2, max:15)')
     if (!email) errors.push('Email required')
     if (!username) errors.push('Username required')
-    else if (username < 5 || username > 20) errors.push('Username character limit(mix:5, max:20')
+    if (username < 5 || username > 20) errors.push('Username character limit(mix:5, max:20')
     if (!password) errors.push('Password required')
     if (!confirmPassword) errors.push('Please confirm password')
     if (password !== confirmPassword) errors.push('Passwords do not match')
