@@ -98,7 +98,9 @@ background: transparent; */
   gap: 30px;
   margin-right: 10px;
 }
-
+.sign-up-button{
+  font-size: 14px;
+}
 .sign-up-button:hover {
   color:#FF5A5F;
 }
