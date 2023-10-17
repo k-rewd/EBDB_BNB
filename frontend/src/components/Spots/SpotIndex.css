@@ -1,35 +1,4 @@
-#dev-icons {
-  /* margin: 0px 75px; */
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
-  box-shadow:  0 3px 5px -2px lightgray;
-  /* position:fixed;
-  width: 100%;
-  background-color: white; */
-}
-/* #dev-button-container{
-  border-bottom: 1px solid gray;
-  margin-bottom: 10px;
-} */
-.fa-github,
-.fa-linkedin,
-.fa-angellist,
-.fa-dev {
-  font-size: 25px;
-  margin: 25px;
-  color: gray;
-  cursor: pointer;
-}
 
-.fa-github:hover,
-.fa-linkedin:hover,
-.fa-angellist:hover,
-.fa-dev:hover {
-  color: #FF5A5F;
-  transform: rotate(15deg);
-  transition: .25s;
-}
 
 
 #outer-most-spots {

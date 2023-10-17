@@ -1,3 +1,10 @@
+.whole-nav {
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+
 .nav-frame {
   display: flex;
   justify-content: space-between;
@@ -5,9 +12,6 @@
   border-bottom: 1px solid lightgray;
   padding: 0 75px;
   height: 75px;
-  /* position:fixed;
-  width: 100%;
-  background-color: white; */
   
 }
 /* display: flex;
@@ -201,4 +205,37 @@ background: transparent; */
 .search-city-state {
   font-style: italic;
   font-weight: 600;
+}
+
+#dev-icons {
+  /* margin: 0px 75px; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  box-shadow:  0 3px 5px -2px lightgray;
+  /* position:fixed;
+  width: 100%;
+  background-color: white; */
+}
+/* #dev-button-container{
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+} */
+.fa-github,
+.fa-linkedin,
+.fa-angellist,
+.fa-dev {
+  font-size: 25px;
+  margin: 25px;
+  color: gray;
+  cursor: pointer;
+}
+
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-angellist:hover,
+.fa-dev:hover {
+  color: #FF5A5F;
+  transform: rotate(15deg);
+  transition: .25s;
 }

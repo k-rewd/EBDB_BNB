@@ -96,47 +96,62 @@ function Navigation({ isLoaded }) {
   }
 
   return (
-    <div className='nav-frame'>
-      <div style={sessionUser ? { width: '280px' } : { width: '166px' }}>
-        <NavLink exact to="/"><img id='ebdbbnb-icon' src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
-          alt="logo" style={{ margin: '0px', padding: '0px' }} /></NavLink>
+    <div className='whole-nav'>
+      <div className='nav-frame'>
+        <div style={sessionUser ? { width: '280px' } : { width: '166px' }}>
+          <NavLink exact to="/"><img id='ebdbbnb-icon' src="https://i.pinimg.com/originals/34/90/aa/3490aa998d1abe961178cd827500926d.jpg"
+            alt="logo" style={{ margin: '0px', padding: '0px' }} /></NavLink>
+        </div>
+        <div id='search-bar'>
+          <form >
+            <div className='input-box'>
+              <input className='search-bar-input'
+                placeholder='search...'
+                type='search'
+                value={query}
+                onChange={newQuery} />
+            </div>
+          </form>
+          {searchContainer ?
+            <div className='search-results'>
+              {query && searchContainer &&
+                <div >
+                  {searchBox.length > 0 ? <div className='search-name'>{searchBox.map((data) => (
+                    <NavLink key={data.id} to={`/spots/${data.id}`} className='one-search'>
+                      <div>{data.name}</div>
+                      <div className='search-city-state'>{data.city}, {data.state}</div>
+                    </NavLink>
+                  ))}
+                  </div> :
+                    <div>No results found!</div>
+                  }
+                </div>
+              }
+            </div> : null}
+        </div>
+
+
+
+        <div>
+          {isLoaded && sessionLinks}
+        </div>
+
+
       </div>
-      <div id='search-bar'>
-        <form >
-          <div className='input-box'>
-            <input className='search-bar-input'
-              placeholder='search...'
-              type='search'
-              value={query}
-              onChange={newQuery} />
-          </div>
-        </form>
-        {searchContainer ?
-          <div className='search-results'>
-            {query && searchContainer &&
-              <div >
-                {searchBox.length > 0 ? <div className='search-name'>{searchBox.map((data) => (
-                  <NavLink key={data.id} to={`/spots/${data.id}`} className='one-search'>
-                    <div>{data.name}</div>
-                    <div className='search-city-state'>{data.city}, {data.state}</div>
-                  </NavLink>
-                ))}
-                </div> :
-                  <div>No results found!</div>
-                }
-              </div>
-            }
-          </div> : null}
+      <div id="dev-icons">
+        <span id="dev-button-container">
+          <a href='https://github.com/k-rewd' target='_blank' rel='noreferrer'>
+            <i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/andrew-k-474479123/" target='_blank' rel='noreferrer'>
+            <i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://angel.co/u/andrew-kim-174" target='_blank' rel='noreferrer'>
+            <i class="fa-brands fa-angellist"></i></a>
+          <a href="https://k-rewd.github.io/" target='_blank' rel='noreferrer'>
+            <i class="fa-brands fa-dev"></i></a>
+        </span>
       </div>
-
-
-
-      <div>
-        {isLoaded && sessionLinks}
-      </div>
-
-
     </div>
+
   );
 }
 

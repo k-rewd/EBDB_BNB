@@ -26,18 +26,7 @@ const SpotIndex = () => {
   // } else {
   return (
     <div>
-      <div id="dev-icons">
-        <span id="dev-button-container">
-          <a href='https://github.com/k-rewd' target='_blank' rel='noreferrer'>
-          <i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/andrew-k-474479123/" target='_blank' rel='noreferrer'>
-          <i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://angel.co/u/andrew-kim-174" target='_blank' rel='noreferrer'>
-          <i class="fa-brands fa-angellist"></i></a>
-          <a href="https://k-rewd.github.io/" target='_blank' rel='noreferrer'>
-          <i class="fa-brands fa-dev"></i></a>
-        </span>
-      </div>
+
       <div id="outer-most-spots">
         <div className="frame">
           {Object.values(spots).map(spot => (
