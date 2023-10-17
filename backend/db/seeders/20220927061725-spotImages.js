@@ -117,7 +117,7 @@ module.exports = {
       },
       {
         spotId: 5,
-        url: 'https://static.wikia.nocookie.net/cswikia/images/5/5c/De_ancient_cs2.png/revision/latest?cb=20230806182017',
+        url: 'https://static.wikia.nocookie.net/cswikia/images/5/5c/De_ancient_cs2.png',
         preview: true
       },
       {
@@ -165,8 +165,6 @@ module.exports = {
         url: 'https://i.redd.it/will-t3-rework-maps-like-overpass-create-the-same-situation-v0-f6k4hyy7sq8b1.jpg?width=1920&format=pjpg&auto=webp&s=8b550d4ac859e19f7f8738f8adc83aeba780cbe4',
         preview: true
       },
-
-      
       {
         spotId: 7,
         url: 'https://preview.redd.it/overpass-and-vertigo-maps-updated-in-cs2-v0-u0hc6e6vhocb1.jpg?width=640&crop=smart&auto=webp&s=83ecc8c8ef5e0896b36c69c1610d1f26f54c79f7',
@@ -270,7 +268,7 @@ module.exports = {
       },
       {
         spotId: 11,
-        url: 'https://static.wikia.nocookie.net/cswikia/images/a/aa/Cs2_italy.png/revision/latest/scale-to-width-down/1200?cb=20230928213908',
+        url: 'https://static.wikia.nocookie.net/cswikia/images/a/aa/Cs2_italy.png',
         preview: true
       },
       {
@@ -295,7 +293,7 @@ module.exports = {
       },
       {
         spotId: 12,
-        url: 'https://static.wikia.nocookie.net/cswikia/images/1/14/De_canals_cs2.jpg/revision/latest?cb=20230701154307',
+        url: 'https://static.wikia.nocookie.net/cswikia/images/1/14/De_canals_cs2.jpg',
         preview: true
       },
       {
@@ -396,7 +394,7 @@ module.exports = {
       },
       {
         spotId: 16,
-        url: 'https://static.wikia.nocookie.net/cswikia/images/c/cd/Csgo-santorini-workshop.jpg/revision/latest?cb=20160226025714',
+        url: 'https://static.wikia.nocookie.net/cswikia/images/c/cd/Csgo-santorini-workshop.jpg',
         preview: true
       },
       {
