@@ -7,6 +7,7 @@ import ReviewFormModal from "../ReviewForm"
 import './SpotDetails.css'
 import { getSpotBookingsThunk } from "../../store/bookings"
 import BookingForm from "../BookingModal/BookingForm"
+import Map from '../Map/Map'
 
 const SpotDetailIndex = () => {
   const spotDetail = useSelector(state => state.spots.singleSpot)
@@ -114,7 +115,14 @@ const SpotDetailIndex = () => {
             </div>
           </div>
           <div id='map-reviews'>
-            <div id='map-area'>map area</div>
+            <div id='map-area'>
+              <section>
+                {/* < Map/> */}
+              </section>
+              map area
+              under construction!
+
+            </div>
             <div id="reviews">
               <div id='spot-reviews'><SpotReviewIndex /></div>
             </div>
